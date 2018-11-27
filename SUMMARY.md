@@ -11,7 +11,7 @@
   * [07 确保web安全的https](http/07.md)
   * [08 确认访问用户身份的认证](http/08.md)
   * [09 基于http的功能追加协议](http/09.md)
-  * [10 构建微博内容的技术](http/10.md)
+  * [10 构建web内容的技术](http/10.md)
   * [11 web的攻击技术](http/11.md)
 * [Javascript高级程序设计](js_professional/index.md)
   * [01](js_professional/01.md)
