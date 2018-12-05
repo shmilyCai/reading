@@ -1,1 +1,3 @@
-#### JavaScript函数式编程
+# JavaScript函数式编程
+
+可细读
