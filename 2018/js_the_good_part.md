@@ -1,6 +1,31 @@
-#  方法
+# javascript语言精粹
 
-## Array
+## 总结
+
+这本书大多数都是基础知识，不想总结的
+
+---
+
+## 对象
+
+对象是属性的容器，其中每个属性都拥有名字和值
+
+对象通过引用来传递，它们永远不会被复制
+
+每个对象都连接到一个原型对象，并且它可以从中继承属性，所有通过对象字面量创建的对象都连接到Object.prototype，zhesh是js中的原型定义
+
+原型连接只有在检索值的时候才被用到，如果我们尝试去获取对象的某个属性值，但该对象没有此属性名，那么js会试着从原型对象中获取属性值。如果那个原型对象也没有改属性，那么再从它的原型中寻找
+
+请注意原型链中的任何属性都会产生值
+
+delete运算符可以用来删除对象的属性，如果对象包含该属性，那么该属性就会被删除
+
+---
+
+
+##  方法
+
+### Array
 
 concat(item...)
 
@@ -45,13 +70,13 @@ unshift()
 	把元素添加到数组中，把item插入到array的开始部分
 
 
-## Function
+### Function
 
 apply(thisArg, argArray)
 
 	apply调用function，传递一个会被绑定到this上的对象和一个可选的数组作为参数
 
-## Number
+### Number
 
 toExponential(fractionDigits)
 
@@ -69,13 +94,13 @@ toString(radix)
 
 	把number转换成为一个字符串
 
-## Object
+### Object
 
 .hasOwnProperty(name)
 
 	 如果object包含一个名为name的属性，那么hasOwnProperty方法返回true，原型链中的同名属性是不会被检查的
 
-## RegExp
+### RegExp
 
 .exec(string)
 
@@ -85,7 +110,7 @@ toString(radix)
 
 	使用正则表达式的最简单防范，如果该regexp匹配string，返回true，否则，返回false
 
-## String
+### String
 
 .charAt(pos)
 
@@ -150,8 +175,6 @@ lastIndexOf(searchString， position)
 .formCharCode(char...)
 
 	根据一串数字编码返回一个字符串
-
-
 
 
 
