@@ -1,0 +1,396 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>迈向Angular2：基于TypeScript的高性能SPA框架 · 小仙女的读书笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        <meta name="identifier" content="小仙女的读书笔记" scheme="ISBN">
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="http.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="angular2.html">
+            
+                <a href="angular2.html">
+            
+                    
+                    迈向Angular2：基于TypeScript的高性能SPA框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="http.html">
+            
+                <a href="http.html">
+            
+                    
+                    图解HTTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="js_functional.html">
+            
+                <a href="js_functional.html">
+            
+                    
+                    Javascript函数式编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="js_the_good_part.html">
+            
+                <a href="js_the_good_part.html">
+            
+                    
+                    javascript语言精粹
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="js_professional.html">
+            
+                <a href="js_professional.html">
+            
+                    
+                    Javascript高级程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >迈向Angular2：基于TypeScript的高性能SPA框架</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x8FC8;&#x5411;angular2&#xFF1A;&#x57FA;&#x4E8E;typescript&#x7684;&#x9AD8;&#x6027;&#x80FD;spa&#x6846;&#x67B6;">&#x8FC8;&#x5411;Angular2&#xFF1A;&#x57FA;&#x4E8E;TypeScript&#x7684;&#x9AD8;&#x6027;&#x80FD;SPA&#x6846;&#x67B6;</h1>
+<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
+<pre class="language-"><code>&#x5199;&#x7684;&#x5F88;&#x597D;&#xFF0C;&#x5206;&#x6790;&#x4E86;angularJS&#x7684;&#x4F18;&#x7F3A;&#x70B9;&#xFF0C;&#x4EE5;&#x53CA;angular2&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x53EF;&#x6DF1;&#x5165;&#x7EC6;&#x8BFB;
+</code></pre><hr>
+<h2 id="01">01</h2>
+<h3 id="web-component">Web Component</h3>
+<h3 id="webworker">WebWorker</h3>
+<p>js&#x8FD0;&#x884C;&#x5728;&#x5355;&#x7EBF;&#x7A0B;&#x91CC;&#x9762;&#x5E76;&#x4EE5;&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;&#x4E3A;&#x4E3B;&#xFF0C;&#x4E8B;&#x4EF6;&#x8C03;&#x5EA6;&#x7684;&#x7B56;&#x7565;&#x662F;&#xFF1A;</p>
+<pre class="language-"><code>&#x628A;&#x5404;&#x79CD;&#x4E8B;&#x4EF6;&#x90FD;push&#x5230;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x91CC;&#x9762;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6309;&#x7167;&#x4E8B;&#x4EF6;&#x5230;&#x8FBE;&#x7684;&#x987A;&#x5E8F;&#x4F9D;&#x6B21;&#x5904;&#x7406;&#x3002;
+&#x7136;&#x800C;&#xFF0C;&#x5F53;&#x5176;&#x4E2D;&#x67D0;&#x4E2A;&#x9884;&#x5B9A;&#x7684;&#x4E8B;&#x4EF6;&#x9700;&#x8981;&#x5360;&#x7528;&#x5927;&#x91CF;&#x8FD0;&#x7B97;&#x65F6;&#x95F4;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FD9;&#x79CD;&#x8C03;&#x5EA6;&#x7B56;&#x7565;&#x5C31;&#x5F88;&#x5DEE;&#x3002;
+</code></pre><p>WebWorker&#x5141;&#x8BB8;&#x5728;&#x53E6;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x91CC;&#x9762;&#x6267;&#x884C;&#x8BA1;&#x7B97;&#x5BC6;&#x96C6;&#x578B;&#x4EFB;&#x52A1;&#xFF0C;&#x4ECE;&#x800C;&#x89E3;&#x653E;&#x4E3B;&#x7EBF;&#x7A0B;&#xFF0C;&#x8BA9;&#x5B83;&#x53EF;&#x4EE5;&#x5904;&#x7406;&#x7528;&#x6237;&#x8F93;&#x5165;&#x5E76;&#x6E32;&#x67D3;&#x7528;&#x6237;&#x754C;&#x9762;&#x3002;</p>
+<p>&#x4E3A;&#x4EC0;&#x4E48;angularjs&#x4E0D;&#x5F15;&#x5165;webworker&#xFF1F;</p>
+<pre class="language-"><code>&#x4E3B;&#x8981;&#x662F;&#x56E0;&#x4E3A;&#x6846;&#x67B6;&#x548C;DOM&#x64CD;&#x4F5C;&#x7D27;&#x8026;&#x5408;&#x3002;&#x5728;&#x76D1;&#x89C6;&#x5668;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5185;&#x90E8;&#xFF0C;angularjs&#x7ECF;&#x5E38;&#x76F4;&#x63A5;&#x64CD;&#x4F5C;DOM&#xFF0C;&#x4ECE;&#x800C;&#x65E0;&#x6CD5;&#x628A;&#x76D1;&#x89C6;&#x5668;&#x79FB;&#x52A8;&#x5230;WebWorker&#x4E2D;&#x53BB;&#xFF0C;&#x56E0;&#x4E3A;WebWorker&#x662F;&#x5728;&#x72EC;&#x7ACB;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x88AB;&#x8C03;&#x7528;&#x7684;&#xFF0C;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;DOM&#x3002;
+&#x7ED3;&#x8BBA;&#x662F;&#xFF1A;&#x5728;&#x4E3B;&#x7EBF;&#x7A0B;&#x4E4B;&#x5916;&#x7684;&#x72EC;&#x7ACB;&#x7EBF;&#x7A0B;&#x91CC;&#x9762;&#x76D1;&#x6D4B;&#x6539;&#x52A8;&#x5F88;&#x96BE;&#x83B7;&#x5F97;&#x6210;&#x6548;&#x3002;
+</code></pre><h3 id="&#x4ECE;angularjs&#x4E2D;&#x83B7;&#x53D6;&#x7684;&#x7ECF;&#x9A8C;&#x4E0E;&#x533A;&#x522B;">&#x4ECE;angularJS&#x4E2D;&#x83B7;&#x53D6;&#x7684;&#x7ECF;&#x9A8C;&#x4E0E;&#x533A;&#x522B;</h3>
+<pre class="language-"><code>1. MVC&#x7684;&#x5FAE;&#x67B6;&#x6784;&#x6A21;&#x5F0F;
+2. &#x5728;angularjs&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x8BD5;&#x56FE;&#x90FD;&#x5E94;&#x8BE5;&#x662F;&#x7531;&#x6307;&#x4EE4;&#x7EC4;&#x6210;&#xFF0C;&#x5404;&#x79CD;&#x6307;&#x4EE4;&#x4E92;&#x76F8;&#x534F;&#x4F5C;&#xFF0C;&#x4ECE;&#x800C;&#x5B8C;&#x6210;&#x529F;&#x80FD;&#x5B8C;&#x6574;&#x7684;&#x7528;&#x6237;&#x754C;&#x9762;
+3. &#x670D;&#x52A1;&#x8D1F;&#x8D23;&#x5C01;&#x88C5;&#x5E94;&#x7528;&#x7684;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x3002;&#x5728;&#x670D;&#x52A1;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;HTTP&#x4E0E;RESTful&#x670D;&#x52A1;&#x8FDB;&#x884C;&#x901A;&#x4FE1;&#x3002;
+4. &#x63A7;&#x5236;&#x5668;&#x4E3B;&#x8981;&#x8D1F;&#x8D23;&#x5904;&#x7406;&#x7528;&#x6237;&#x8F93;&#x5165;&#x5E76;&#x628A;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4EE3;&#x7406;&#x7ED9;&#x5BF9;&#x5E94;&#x7684;&#x670D;&#x52A1;
+5. &#x6784;&#x5EFA;angularjs&#x7684;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#x662F;&#xFF1A;
+    &#x63A7;&#x5236;&#x5668;&#x4E0D;&#x5E94;&#x8BE5;&#x64CD;&#x4F5C;DOM&#xFF0C;&#x800C;&#x662F;&#x5E94;&#x8BE5;&#x628A;&#x8BBF;&#x95EE;&#x548C;&#x64CD;&#x4F5C;DOM&#x7684;&#x903B;&#x8F91;&#x5206;&#x79BB;&#x5230;&#x6307;&#x4EE4;&#x4E2D;&#x53BB;&#x3002;&#x5982;&#x679C;&#x63A7;&#x5236;&#x5668;&#x4E4B;&#x95F4;&#x6709;&#x4E00;&#x4E9B;&#x91CD;&#x590D;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x6700;&#x5927;&#x7684;&#x53EF;&#x80FD;&#x5C31;&#x662F;&#xFF1A;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x628A;&#x8FD9;&#x4E9B;&#x903B;&#x8F91;&#x5C01;&#x88C5;&#x5230;&#x67D0;&#x4E2A;&#x670D;&#x52A1;&#x91CC;&#x9762;&#xFF0C;&#x5982;&#x679C;&#x67D0;&#x4E2A;&#x63A7;&#x5236;&#x5668;&#x9700;&#x8981;&#x7528;&#x5230;&#x8FD9;&#x4E9B;&#x529F;&#x80FD;&#xFF0C;&#x5C31;&#x4F7F;&#x7528;angular JS&#x7684;&#x4F9D;&#x8D56;&#x6CE8;&#x5165;&#x673A;&#x5236;&#x6CE8;&#x5165;&#x8FD9;&#x4E2A;&#x670D;&#x52A1;&#x3002;
+6. scope
+    angularJS&#x4E2D;&#x7684;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x673A;&#x5236;&#x662F;&#x5229;&#x7528;scope&#x5BF9;&#x8C61;&#x6765;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x9996;&#x5148;&#x5728;scope&#x5BF9;&#x8C61;&#x4E0A;&#x6DFB;&#x52A0;&#x5404;&#x79CD;&#x5C5E;&#x6027;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x6A21;&#x7248;&#x4E2D;&#x663E;&#x5F0F;&#x58F0;&#x660E;&#x9700;&#x8981;&#x7ED1;&#x5B9A;&#x8FD9;&#x4E9B;&#x5C5E;&#x6027;&#xFF08;&#x5355;&#x5411;&#x7ED1;&#x5B9A;&#x6216;&#x8005;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#xFF09;&#x3002;&#x8FD8;&#x6709;&#x91CD;&#x8981;&#x804C;&#x8D23;&#xFF1A;&#x6D3E;&#x53D1;&#x4E8B;&#x4EF6;&#x548C;&#x5B9E;&#x73B0;&#x57FA;&#x4E8E;&#x810F;&#x503C;&#x68C0;&#x6D4B;&#x7684;&#x884C;&#x4E3A;
+   `controller as syntax`
+    &#x5141;&#x8BB8;&#x76F4;&#x63A5;&#x5728;&#x63A7;&#x5236;&#x5668;&#x5185;&#x90E8;&#x4E3A;&#x5F53;&#x524D;&#x4E0A;&#x4E0B;&#x6587;&#xFF08;this&#xFF09;&#x6DFB;&#x52A0;&#x5C5E;&#x6027;&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x663E;&#x5F0F;&#x6CE8;&#x5165;scope&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5728;&#x4E0A;&#x9762;&#x6DFB;&#x52A0;&#x4E66;&#x5E8F;&#x3002;
+
+    ```
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">ng-controller</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>MainCtrl as main<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">ng-click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>main.clicked()<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Click<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        function MainCtrl() {
+          this.name = &apos;Foobar&apos;;
+    }
+    MainCtrl.prototype.clicked = function () {
+      alert(&apos;You clicked me!&apos;);
+    };
+    ```
+    angular2&#x5220;&#x9664;&#x4E86;scope&#x5BF9;&#x8C61;&#xFF0C;&#x6240;&#x6709;&#x8868;&#x8FBE;&#x5F0F;&#x90FD;&#x5728;&#x7279;&#x5B9A;UI&#x7EC4;&#x4EF6;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x6267;&#x884C;&#x3002;&#x628A;scope API&#x6574;&#x4F53;&#x5220;&#x9664;&#x6389;&#x4E4B;&#x540E;&#x4F7F;&#x5F97;Angular2&#x5F97;&#x5230;&#x4E86;&#x5927;&#x5E45;&#x5EA6;&#x7B80;&#x5316;&#xFF0C;&#x4E0D;&#x518D;&#x9700;&#x8981;&#x663E;&#x5F0F;&#x6CE8;&#x5165;scope&#x4E86;&#xFF0C;&#x53EA;&#x8981;&#x628A;&#x5C5E;&#x6027;&#x76F4;&#x63A5;&#x6DFB;&#x52A0;&#x5230;UI&#x7EC4;&#x4EF6;&#x4E0A;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x8FDB;&#x884C;&#x7ED1;&#x5B9A;&#x64CD;&#x4F5C;&#x5373;&#x53EF;&#x3002;
+
+7. &#x4F9D;&#x8D56;&#x6CE8;&#x5165;
+    DI&#x5E26;&#x6765;&#x7684;&#x597D;&#x5904;&#xFF1A;&#x6613;&#x6D4B;&#x8BD5;&#xFF0C;&#x66F4;&#x597D;&#x7684;&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#x548C;&#x6A21;&#x5757;&#x5316;&#xFF0C;&#x4EE5;&#x53CA;&#x66F4;&#x7B80;&#x6D01;&#x660E;&#x4E86;&#x3002;
+    angularJS&#x91C7;&#x7528;&#x4E86;&#x4F9D;&#x8D56;&#x6CE8;&#x5165;
+    angular2&#x4F7F;&#x7528;ES2016&#x7684;&#x88C5;&#x9970;&#x5668;&#xFF08;decorator&#xFF09;&#x8BED;&#x6CD5;&#x5BF9;&#x4F7F;&#x7528;DI&#x7684;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x4E86;&#x6CE8;&#x89E3;&#x3002;
+
+8. &#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;
+
+    &#x53EF;&#x4EE5;&#x628A;&#x5355;&#x9875;&#x5E94;&#x7528;&#x4E2D;&#x6240;&#x8BF7;&#x6C42;&#x7684;&#x67D0;&#x4E2A;&#x89C6;&#x56FE;&#x518D;&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#x597D;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x5BF9;&#x5E94;&#x7684;HTML&#x76F4;&#x63A5;&#x53D1;&#x9001;&#x7ED9;&#x7528;&#x6237;&#x3002;&#x968F;&#x540E;&#xFF0C;&#x5728;&#x6240;&#x6709;&#x8D44;&#x6E90;&#x5904;&#x7406;&#x5B8C;&#x6BD5;&#x4E4B;&#x540E;&#xFF0C;&#x811A;&#x672C;&#x5C31;&#x4F1A;&#x6DFB;&#x52A0;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x5668;&#x5E76;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x64CD;&#x4F5C;&#x3002;
+    &#x597D;&#x5904;&#xFF1A;&#x63D0;&#x5347;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#xFF0C;&#x6784;&#x5EFA;SEO&#x53CB;&#x597D;&#x7684;&#x5E94;&#x7528;
+    angularjs&#x4E0D;&#x652F;&#x6301;
+
+9. &#x5927;&#x89C4;&#x6A21;&#x5E94;&#x7528;
+    angularJS&#x4E2D;&#x4E0D;&#x540C;&#x7684;&#x76D1;&#x89C6;&#x5668;&#x4E4B;&#x95F4;&#x6709;&#x76F8;&#x4E92;&#x4F9D;&#x8D56;&#xFF0C;&#x4ECE;&#x800C;&#x5BFC;&#x81F4;&#x4E86;digest&#x5FAA;&#x73AF;&#x5FC5;&#x987B;&#x8FDB;&#x884C;&#x82E5;&#x5E72;&#x6B21;&#x904D;&#x5386;&#xFF0C;&#x624D;&#x80FD;&#x4F7F;&#x5F97;&#x8868;&#x8FBE;&#x7684;&#x7ED3;&#x679C;&#x624D;&#x80FD;&#x6700;&#x7EC8;&#x8D8B;&#x4E8E;&#x7A33;&#x5B9A;&#x3002;
+    angular2&#x91C7;&#x7528;&#x5355;&#x5411;&#x6570;&#x636E;&#x6D41;&#xFF0C;&#x5177;&#x5907;&#x5982;&#x4E0B;&#x7684;&#x4F18;&#x70B9;&#xFF1A;
+    * &#x66F4;&#x660E;&#x786E;&#x7684;&#x6570;&#x636E;&#x6D41;
+    * &#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x4E4B;&#x95F4;&#x6CA1;&#x6709;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#xFF0C;&#x6240;&#x4EE5;digest&#x6CA1;&#x6709;&#x5B58;&#x6D3B;&#x65F6;&#x95F4;&#x7684;&#x6982;&#x5FF5;
+    * &#x6027;&#x80FD;&#x66F4;&#x9AD8;&#xFF0C;&#xFF08;digest&#x5FAA;&#x73AF;&#x53EA;&#x8FD0;&#x884C;&#x4E00;&#x6B21;&#xFF0C;&#x521B;&#x5EFA;&#x5BF9;immutable/abservable&#xFF08;&#x4E0D;&#x53EF;&#x53D8;/&#x53EF;&#x89C2;&#x5BDF;&#xFF09;&#x6570;&#x636E;&#x6A21;&#x578B;&#x53CB;&#x597D;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x4ECE;&#x800C;&#x53EF;&#x4EE5;&#x505A;&#x6DF1;&#x5EA6;&#x4F18;&#x5316;&#x3002;
+
+10. &#x6A21;&#x7248;
+    &#x6A21;&#x7248;&#x662F;&#x7B80;&#x5355;&#x7684;HTML&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x9700;&#x8981;&#x4E2D;&#x95F4;&#x7684;&#x5904;&#x7406;&#x548C;&#x7F16;&#x8BD1;&#x8FC7;&#x7A0B;&#x3002;
+    &#x6A21;&#x7248;&#x5F0F;angularjs&#x7684;&#x6838;&#x5FC3;&#x7279;&#x6027;&#x4E4B;&#x4E00;&#x3002;
+
+11. &#x810F;&#x503C;&#x68C0;&#x6D4B;
+    &#x5185;&#x8054;&#x7F13;&#x5B58;&#xFF08;&#x5229;&#x7528;JavaScript&#x865A;&#x62DF;&#x673A;&#x7684;&#x4EE3;&#x7801;&#x4F18;&#x5316;&#x673A;&#x5236;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x663E;&#x8457;&#x7684;&#x6027;&#x80FD;&#x63D0;&#x5347;&#xFF0C;&#x5176;&#x4E2D;&#x4E00;&#x79CD;&#x4F18;&#x5316;&#x53EB;&#x5185;&#x8054;&#x7F13;&#x5B58;&#xFF09;
+    angular2&#x4E2D;&#x6709;2&#x79CD;&#x5185;&#x7F6E;&#x810F;&#x503C;&#x68C0;&#x6D4B;&#x673A;&#x5236;&#xFF1A;
+    * &#x52A8;&#x6001;&#x810F;&#x503C;&#x68C0;&#x6D4B;&#xFF0C;&#x4E0E;angularjs&#x4E2D;&#x7684;&#x810F;&#x503C;&#x68C0;&#x6D4B;&#x673A;&#x5236;&#x7C7B;&#x4F3C;&#xFF0C;&#x7528;&#x4E8E;&#x4E0D;&#x5141;&#x8BB8;eval()&#x7684;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x5982;csp&#x63D2;&#x4EF6;&#x548C;chrome&#x63D2;&#x4EF6;
+    * JIT&#x810F;&#x503C;&#x68C0;&#x6D4B;&#xFF0C;&#x8FD0;&#x884C;&#x65F6;&#x52A8;&#x6001;&#x751F;&#x6210;&#x810F;&#x503C;&#x68C0;&#x6D4B;&#x4EE3;&#x7801;&#xFF0C;&#x8FD0;&#x884C;JavaScript&#x865A;&#x62DF;&#x673A;&#x8FDB;&#x884C;&#x6DF1;&#x5EA6;&#x4EE3;&#x7801;&#x4F18;&#x5316;
+</code></pre><h2 id="02-angular2&#x5E94;&#x7528;&#x7684;&#x57FA;&#x7840;&#x6784;&#x4EF6;">02 Angular2&#x5E94;&#x7528;&#x7684;&#x57FA;&#x7840;&#x6784;&#x4EF6;</h2>
+<pre class="language-"><code>&#x672C;&#x7AE0;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;angular2&#x6838;&#x5FC3;&#x7EC4;&#x4EF6;&#x7684;&#x6982;&#x8981;&#x4ECB;&#x7ECD;&#xFF0C;&#x540E;&#x9762;&#x4F5C;&#x6DF1;&#x5165;&#x4ECB;&#x7ECD;
+
+1. Component&#xFF08;&#x7EC4;&#x4EF6;&#xFF09;
+component&#x662F;angular2&#x4E2D;&#x521B;&#x5EFA;&#x7528;&#x6237;&#x754C;&#x9762;&#x7684;&#x4E3B;&#x8981;&#x6784;&#x4EF6;&#x3002;
+component&#x76F4;&#x63A5;&#x7EE7;&#x627F;&#x81EA;Directives&#xFF0C;&#x6269;&#x5C55;&#x4E86;&#x66F4;&#x591A;&#x7279;&#x6027;&#xFF0C;&#x5982;&#x589E;&#x52A0;&#x89C6;&#x56FE;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x89C6;&#x56FE;&#x4E0A;&#x7ED1;&#x5B9A;&#x6A21;&#x7248;&#xFF0C;&#x4ECE;&#x800C;&#x53EF;&#x4EE5;&#x6E32;&#x67D3;&#x5404;&#x79CD;&#x6307;&#x4EE4;&#x7684;&#x7EC4;&#x5408;&#x4F53;
+
+&#x6307;&#x4EE4;&#x7684;&#x7528;&#x9014;&#x662F;&#x5C01;&#x88C5;&#x4E0E;DOM&#x76F8;&#x5173;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x901A;&#x8FC7;&#x6269;&#x5C55;HTML&#x7684;&#x8BED;&#x6CD5;&#x548C;&#x8BED;&#x4E49;&#x6765;&#x6784;&#x5EFA;&#x7EC4;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x8FD9;&#x4E9B;&#x7EC4;&#x4EF6;&#x7EC4;&#x5408;&#x5230;&#x4E00;&#x8D77;&#x6784;&#x5EFA;&#x51FA;&#x7528;&#x6237;&#x754C;&#x9762;&#x3002;
+
+2. Pipe&#xFF08;&#x7BA1;&#x9053;&#xFF09;&#x662F;angular2&#x4E2D;&#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;angularjs&#x4E2D;&#x7684;&#x8FC7;&#x6EE4;&#x5668;
+
+3. &#x810F;&#x503C;&#x68C0;&#x6D4B;
+Differ&#xFF08;&#x5DEE;&#x5F02;&#x6BD4;&#x8F83;&#x5668;&#xFF09;&#x6765;&#x4F18;&#x5316;&#x810F;&#x503C;&#x68C0;&#x6D4B;&#x673A;&#x5236;&#x3002;
+
+digest&#x5FAA;&#x73AF;&#xFF1A;
+    Angular&#x5728;&#x6307;&#x4EE4;ng-model&#x548C;ng-bind&#xFF08;&#x5728;&#x6211;&#x4EEC;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x91CC;&#x9762;&#x4E5F;&#x5C31;&#x662F;&#x53D6;&#x503C;&#x6307;&#x4EE4;{{}}&#xFF09;&#x5185;&#x90E8;&#x4E3A;&#x540C;&#x4E00;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;label&#x6DFB;&#x52A0;&#x4E86;&#x591A;&#x4E2A;watcher&#xFF08;&#x76D1;&#x89C6;&#x5668;&#xFF09;&#xFF0C;&#x4EE5;&#x5B9E;&#x73B0;&#x4E0D;&#x540C;&#x7684;&#x884C;&#x4E3A;&#x3002;&#x8FD9;&#x4E9B;&#x76D1;&#x89C6;&#x5668;&#x4E0E;&#x7ECF;&#x5178;&#x7684;MVC&#x6A21;&#x5F0F;&#x4E2D;&#x7684;&#x89C2;&#x5BDF;&#x8005;&#x975E;&#x5E38;&#x7C7B;&#x4F3C;&#x3002;&#x5728;&#x6307;&#x5B9A;&#x7684;&#x4E8B;&#x4EF6;&#x53D1;&#x751F;&#x7684;&#x65F6;&#x5019;&#xFF08;&#x5728;&#x6211;&#x4EEC;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6587;&#x672C;&#x8F93;&#x5165;&#x6846;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x7684;&#x65F6;&#x5019;&#xFF09;&#xFF0C;AngularJS&#x5C06;&#x5FAA;&#x73AF;&#x904D;&#x5386;&#x6240;&#x6709;&#x76D1;&#x89C6;&#x5668;&#xFF0C;&#x5728;&#x6307;&#x5B9A;&#x7684;scope&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x8FD0;&#x7B97;&#x4E0E;&#x4E4B;&#x76F8;&#x5173;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x5E76;&#x628A;&#x7ED3;&#x679C;&#x5B58;&#x50A8;&#x8D77;&#x6765;&#x3002;&#x8FD9;&#x79CD;&#x5FAA;&#x73AF;&#x5C31;&#x662F;&#x6240;&#x8C13;&#x7684;digest&#x5FAA;&#x73AF;&#x3002;
+
+4. &#x5206;&#x533A;
+5. &#x670D;&#x52A1;
+6. &#x8DEF;&#x7531;
+</code></pre><h2 id="03-typescript&#x901F;&#x6210;">03 TypeScript&#x901F;&#x6210;</h2>
+<h2 id="04-&#x7EC4;&#x4EF6;&#x548C;&#x6307;&#x4EE4;&#x5165;&#x95E8;">04 &#x7EC4;&#x4EF6;&#x548C;&#x6307;&#x4EE4;&#x5165;&#x95E8;</h2>
+<h2 id="05-&#x4F9D;&#x8D56;&#x6CE8;&#x5165;">05 &#x4F9D;&#x8D56;&#x6CE8;&#x5165;</h2>
+<h2 id="06-&#x8DEF;&#x7531;&#x548C;&#x8868;&#x5355;">06 &#x8DEF;&#x7531;&#x548C;&#x8868;&#x5355;</h2>
+<h2 id="07-&#x7BA1;&#x9053;&#x4E0E;restful&#x670D;&#x52A1;&#x4E4B;&#x95F4;&#x7684;&#x901A;&#x4FE1;">07 &#x7BA1;&#x9053;&#x4E0E;RESTful&#x670D;&#x52A1;&#x4E4B;&#x95F4;&#x7684;&#x901A;&#x4FE1;</h2>
+<h2 id="08-&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;">08 &#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;</h2>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> caicai&#xA0;&#x7248;&#x6743;&#x6240;&#x6709;&#xA0;&#xA0;https://github.com/shmilyCai/reading </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <span>&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;</span> 2018-12-11 15:07:20 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="http.html" class="navigation navigation-next " aria-label="Next page: 图解HTTP">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"迈向Angular2：基于TypeScript的高性能SPA框架","level":"1.2","depth":1,"next":{"title":"图解HTTP","level":"1.3","depth":1,"path":"2018/http.md","ref":"2018/http.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-footer-ex","prism","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"1","family":"sans","theme":"night"},"pluginsConfig":{"prism":{},"livereload":{},"page-footer-ex":{"copyright":"caicai&nbsp;版权所有&nbsp;&nbsp;https://github.com/shmilyCai/reading","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<span>该文件修订时间</span>"},"search":{},"books":{"prism_themes":["prismjs/themes/prism-tomorrow.css"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white","family":"msyh","size":2},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":10,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"小仙女的读书笔记","variables":{},"title":"小仙女的读书笔记","links":{"sharing":{"all":false,"facebook":false,"google":false,"twitter":false,"weibo":false},"sidebar":{}},"gitbook":"*","description":"小仙女的读书笔记","extension":null},"file":{"path":"2018/angular2.md","mtime":"2018-12-11T07:07:20.764Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-11T07:07:59.588Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
