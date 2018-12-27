@@ -711,6 +711,30 @@ Promise实例生成以后，可用then方法分别指定resolved状态和rejecte
 
 ## Generator函数
 
+Generator函数是一个状态机，封装了多个内部状态
+
+执行Generator函数会返回一个遍历器对象，返回的遍历器对象可以依次遍历generator函数内部的每一个状态
+
+特征：
+1. function关键字与函数名之间有一个星号
+2. 函数体内部使用yield表达式，定义不同的内部状态
+
+### yield，暂停标志
+
+yield，暂停执行
+
+next，恢复执行
+
+遍历器对象的next方法的运行逻辑如下：
+1. 遇到yield表达式，就暂停执行后面的操作，并将紧跟在yield后面的表达式的值，作为返回的对象的value属性值
+2. 下一次调用next方法时，再继续往下执行，直到遇到下一个yield表达式
+3. 如果没有再遇到新的yield表达式，就一直运行到函数结束，直到return语句为止，并将return语句后面的表达式的值，作为返回的对象的value属性值
+4. 如果该函数没有return语句，则返回的对象的value属性值为undefined
+
+yield与return
+1. 都能返回紧跟在语句后面的那个表达式的值
+
+
 ## Generator函数的异步应用
 
 ## async函数
