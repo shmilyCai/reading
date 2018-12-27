@@ -506,6 +506,8 @@ new Map([
 5. Map转为JSON
 6. JSON转为Map
 
+### WeakMap
+
 结构与Map结构类似，也是用于生成键值对的集合
 
 注意：
@@ -513,15 +515,199 @@ new Map([
 2. WeakMap的键名所指向的对象，不计入垃圾回收机制
 3. 没有属性和遍历操作
 
-### WeakMap
-
 ## Proxy
+
+Proxy可以理解成，在目标对象之前架设一层“拦截”，外界对该对象的访问，都必须通过这层拦截，因此提供了一种机制，可以对外界的访问进行过滤和改写。
+
+```
+var proxy = new Proxy(target, handler);
+//new Proxy表示生成一个Proxy实例，
+//target参数表示所要拦截的目标对象，
+//handle参数是对象，定制拦截行为
+```
+
+### Proxy实例的方法
+
+	get()，用于拦截某个属性的读取操作，接收参数依次为目标对象，属性名和peoxy实例本身，最后一个参数可选
+	set(), 用来拦截某个属性的赋值操作，接收参数依次为目标对象，属性名，属性值和Proxy实例本身
+	apply()，用于拦截函数的调用，call和apply操作
+	has()，用于拦截HasProperty操作，即判断对象是否具有某个属性时，这个方法会生效，典型的操作就是in运算符
+	contruct()，用于拦截new命令
+	deleteProperty()，用于拦截delete操作，如果这个方法抛出错误或者false，当前属性就无法被delete命令操作
+	defineProperty()，用于拦截Object.defineProperty操作
+	getOwnPropertyDescriptor()，用于拦截Object.getOwnPropertyDescriptor
+	getPrototypeOf()，用于拦截获取对象的原型
+	isExtensiblie()，用于拦截Object.isExtensiblie操作
+	ownKeys()，用于拦截对象自身属性的读取操作
+	preventExtensions()，用于拦截Object.preventExtensions操作，该方法必须返回一个布尔值，否则会被自动转为布尔值
+	setPrototypeOf()，用于拦截Object.setPrototypeOf方法
+
+	Proxy.revocable()，返回一个可取消的Proxy实例
+
+注意：
+
+在Proxy代理的情况下，目标对象内部的this关键字会指向Proxy代理
 
 ## Reflect
 
-##Promise对象
+Reflect对象与Proxy对象一样，设计目的：
+
+1.  将Object对象的一些明显属于语言内部的方法（比如Object.defineProperty），放到Reflect对象上
+
+2. 修改某些Object方法的返回结果，让其变得更合理
+
+3. 让Object操作都变成函数行为
+
+4. Reflect对象的方法与Proxy对象的方法一一对应，只要是Proxy对象的方法，就能在Reflect对象上找到对应的方法
+
+```
+// 老写法
+try {
+  Object.defineProperty(target, property, attributes);
+  // success
+} catch (e) {
+  // failure
+}
+
+// 新写法
+if (Reflect.defineProperty(target, property, attributes)) {
+  // success
+} else {
+  // failure
+}
+```
+
+### 静态方法
+
+Object方法所拥有的部分方法
+
+	Reflect.apply(target, thisArg, args)
+	Reflect.construct(target, args)
+	Reflect.get(target, name, receiver)
+	Reflect.set(target, name, value, receiver)
+	Reflect.defineProperty(target, name, desc)
+	Reflect.deleteProperty(target, name)
+	Reflect.has(target, name)
+	Reflect.ownKeys(target)
+	Reflect.isExtensible(target)
+	Reflect.preventExtensions(target)
+	Reflect.getOwnPropertyDescriptor(target, name)
+	Reflect.getPrototypeOf(target)
+	Reflect.setPrototypeOf(target, prototype)
+
+## Promise对象
+
+Promise是异步编程的一种解决方案，传统的解决方案是回调函数和事件
+
+Promise，是一个对象，可以获取异步操作的消息。
+
+特点：
+1. 对象的状态不受外界影响。
+2. 一旦状态改变，就不会再变，任何时候都可以得到这个结果。
+
+状态：
+pending（进行中），fulfilled（已成功），rejected（已失败）
+
+只有2种状态改变：
+1. 从pending变为fulfilled（resolved），
+2. 从pending变为rejected
+
+### 基本用法
+
+```
+const promise = new Promise(function(resolve, reject) {
+  // ... some code
+
+  if (/* 异步操作成功 */){
+    resolve(value);
+  } else {
+    reject(error);
+  }
+});
+
+promise.then(function(value) {
+  // success
+}, function(error) {
+  // failure
+});
+```
+
+Promise实例生成以后，可用then方法分别指定resolved状态和rejected状态的回调
+
+### 方法
+
+	Promise.prototype.then()，为实例添加状态改变时的回调函数
+	Promise.prototype.catch()，是.then(null, rejection)的别名，用于指定发生错误时的回调函数
+	Promise.prototype.finally()，用于指定不管promise对象最后状态如何，都会执行的操作
+	Promise.all()，用于将多个Promise实例，包装成一个新的Promise实例
+	Promise.race()，同样是将多个promise实例，包装成一个新的promise实例
+	Promise.resolve()，将对象转换为promise对象
+	Promise.reject(), 会返回一个新的Promise实例，该实例的状态为rejected
+	Promise.try()，
+		不知道或者不想区分，函数f是同步函数还是异步操作，但是想用 Promise 来处理它。因为这样就可以不管f是否包含异步操作，都用then方法指定下一步流程，用catch方法处理f抛出的错误
+		用法：Promise.resolve().then(f)
+
 
 ## Iterator和for……of对象
+
+### Iterator
+
+是一种接口，为各种不同的数据结构提供统一的访问机制，任何数据结构只要部署Iterator接口，就可以完成遍历操作，即依次处理该数据结构的所有成员
+
+作用：
+1. 为各种数据结构，提供一个统一的，简便的访问接口
+2. 使得数据结构的成员能够按某种次序排列
+3. ES6创造了一种新的遍历命令for...of循环
+
+遍历过程：
+1. 创建一个指针对象，指向当前数据结构的起始位置，即遍历器对象本质上，就是一个指针对象
+2. 第一次调用指针对象的next方法，可以将指针指向数据结构的第一个成员
+3. 第二次调用指针对象的next方法，指针就指向数据结构的第二个成员
+4. 不断调用指针对象的next方法，直到它指向数据结构的结束位置
+
+每一次调用next方法，都会返回数据结构的当前成员的信息，即返回一个包含value（当前成员）和done（true和false，表示是否结束）两个属性的对象。
+
+原生具备了Iterrator接口的数据结构如下：
+（即原生拥有Symbol.iterator属性）
+1. Array
+2. Map
+3. Set
+4. String
+5. TypedArray
+6. 函数的arguments对象
+7. NodeList对象
+
+#### 调用Iterator接口的场合
+
+即默认调用Iterator接口
+
+1. 解构赋值
+2. 扩展运算
+3. yield*
+4. 数组的遍历会调用遍历器接口，任何接收数组作为参数的场合
+
+	for...of
+	Array.from()
+	Map(), Set(), WeakMap(), WeakSet()（比如new Map([['a',1],['b',2]])）
+	Promise.all()
+	Promise.race()
+
+#### 字符串的Iterator接口
+
+	字符串是一个类似数组的对象，即具有Iterator接口
+
+#### 方法
+
+.next(),
+.return(), for...of循环提前退出（通常因为出错或者有break）,
+.throw(),配合Generator函数使用
+
+### for...of循环
+
+遍历所有数据结构的统一方法
+
+一个数据结构只要部署了Symbol.iterator属性，就被视为具有 iterator 接口，就可以用for...of循环遍历它的成员。也就是说，for...of循环内部调用的是数据结构的Symbol.iterator方法
+	
 
 ## Generator函数
 
