@@ -1017,7 +1017,69 @@ class可以通过extends关键字实现继承，继承类的所有属性和方�
 
 ## Decorator
 
+装饰器只能用于类和类的方法，不能用于函数，因为存在函数提升。
+
+### 类的装饰器
+
+类的装饰器，用于修改类的行为
+
+装饰器是编译时执行的函数
+
+装饰器函数的第一个参数，就是所要修饰的目标类
+
+主要用于修饰class的参数
+
+demo：
+
+```
+function testable(target) {
+  target.prototype.isTestable = true;
+}
+
+@testable
+class MyTestableClass {}
+
+let obj = new MyTestableClass();
+obj.isTestable // true
+```
+
+### 方法的装饰器
+
+装饰器作用：注释和类型检查
+
+修饰器会修改属性的描述对象，然后被修改的描述对象再用来定义属性。
+
 ## Module的语法
+
+模块的主要2个命令：export和import
+
+### 严格模式
+
+### export
+
+export用于规定模块的对外接口，
+
+export输出的变量就是本来的名字
+
+可以使用as关键字重名
+
+`export default` 为模块指定默认输出（变量或者方法）
+
+### import
+
+import用于输入其他模块提供的功能
+
+import命令使用as关键字，将输入的变量重命名
+
+注意：
+1. import命令输入的变量都是只读的
+2. 模块的整体加载，使用`*`指定对象
+
+`import()`函数作用：
+1. 按需加载
+2. 条件加载
+3. 动态的模块路径
+
 
 ## Module的加载实现
 
