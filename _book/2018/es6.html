@@ -108,7 +108,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="react.html">
+        <li class="chapter " data-level="1.2" data-path="../2019/js_data_structures.html">
+            
+                <a href="../2019/js_data_structures.html">
+            
+                    
+                    学习JavaScript数据结构与算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="react.html">
             
                 <a href="react.html">
             
@@ -121,7 +134,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="angular2.html">
+        <li class="chapter " data-level="1.4" data-path="angular2.html">
             
                 <a href="angular2.html">
             
@@ -134,7 +147,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4" data-path="es6.html">
+        <li class="chapter active" data-level="1.5" data-path="es6.html">
             
                 <a href="es6.html">
             
@@ -147,7 +160,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="http.html">
+        <li class="chapter " data-level="1.6" data-path="http.html">
             
                 <a href="http.html">
             
@@ -160,7 +173,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="js_functional.html">
+        <li class="chapter " data-level="1.7" data-path="js_functional.html">
             
                 <a href="js_functional.html">
             
@@ -173,7 +186,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="js_the_good_part.html">
+        <li class="chapter " data-level="1.8" data-path="js_the_good_part.html">
             
                 <a href="js_the_good_part.html">
             
@@ -186,7 +199,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="js_professional.html">
+        <li class="chapter " data-level="1.9" data-path="js_professional.html">
             
                 <a href="js_professional.html">
             
@@ -526,6 +539,40 @@ for (let [,value] of map) {
 <p>ES6&#x5141;&#x8BB8;&#x76F4;&#x63A5;&#x5199;&#x5165;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;</p>
 <p>Object.is()&#xFF0C;&#x7528;&#x6765;&#x6BD4;&#x8F83;2&#x4E2A;&#x503C;&#x662F;&#x5426;&#x4E25;&#x683C;&#x76F8;&#x7B49;</p>
 <p>Object.assign()&#xFF0C;&#x5C06;&#x6E90;&#x5BF9;&#x8C61;source&#x7684;&#x6240;&#x6709;&#x679A;&#x4E3E;&#x5C5E;&#x6027;&#x590D;&#x5236;&#x5230;&#x76EE;&#x6807;&#x5BF9;&#x8C61;target</p>
+<p>&#x65B9;&#x6CD5;&#x7684;&#x51FD;&#x6570;&#x6CE8;&#x610F;&#xFF1A;</p>
+<ol>
+<li>bind&#x65B9;&#x6CD5;&#x521B;&#x9020;&#x7684;&#x51FD;&#x6570;&#xFF0C;name&#x5C5E;&#x6027;&#x8FD4;&#x56DE;&#x201C;bound&#x201D;&#x52A0;&#x4E0A;&#x539F;&#x51FD;&#x6570;&#x7684;&#x540D;&#x5B57;</li>
+<li>Function&#x6784;&#x9020;&#x51FD;&#x6570;&#x521B;&#x9020;&#x7684;&#x51FD;&#x6570;&#xFF0C;name&#x5C5E;&#x6027;&#x8FD4;&#x56DE;&#x201C;anonymous&#x201D;</li>
+<li>&#x5982;&#x679C;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x4E00;&#x4E2A;Symbol&#x503C;&#xFF0C;&#x90A3;&#x4E48;name&#x5C5E;&#x6027;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x8FD9;&#x4E2A;Symbol&#x503C;&#x7684;&#x63CF;&#x8FF0;</li>
+</ol>
+<p>&#x5BF9;&#x8C61;&#x5FAA;&#x73AF;&#x6CE8;&#x610F;&#xFF1A;</p>
+<ol>
+<li><p>for...in&#x5FAA;&#x73AF;&#xFF0C;&#x53EA;&#x904D;&#x5386;&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x7684;&#x548C;&#x7EE7;&#x627F;&#x7684;&#x53EF;&#x679A;&#x4E3E;&#x5C5E;&#x6027;
+ &#x5FAA;&#x73AF;&#x904D;&#x5386;&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x7684;&#x548C;&#x7EE7;&#x627F;&#x7684;&#x53EF;&#x679A;&#x4E3E;&#x5C5E;&#x6027;&#xFF08;&#x4E0D;&#x542B;Symbol&#x5C5E;&#x6027;&#xFF09;</p>
+</li>
+<li><p>Object.keys()&#xFF0C;&#x8FD4;&#x56DE;&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x7684;&#x6240;&#x6709;&#x53EF;&#x679A;&#x4E3E;&#x5C5E;&#x6027;&#x7684;&#x952E;&#x540D;
+ &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x5305;&#x62EC;&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x7684;&#xFF08;&#x4E0D;&#x542B;&#x7EE7;&#x627F;&#x7684;&#xFF09;&#x6240;&#x6709;&#x53EF;&#x679A;&#x4E3E;&#x5C5E;&#x6027;&#xFF08;&#x4E0D;&#x542B;Symbol&#x5C5E;&#x6027;&#xFF09;</p>
+</li>
+<li><p>JSON.stringify()&#xFF0C;&#x53EA;&#x4E32;&#x884C;&#x5316;&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x7684;&#x53EF;&#x679A;&#x4E3E;&#x5C5E;&#x6027;
+ &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x5305;&#x542B;&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#xFF08;&#x4E0D;&#x542B;Symbol&#x5C5E;&#x6027;&#xFF0C;&#x4F46;&#x662F;&#x5305;&#x62EC;&#x4E0D;&#x53EF;&#x679A;&#x4E3E;&#x5C5E;&#x6027;&#xFF09;</p>
+</li>
+<li><p>Object.assign()&#xFF0C;&#x53EA;&#x590D;&#x5236;&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x7684;&#x53EF;&#x679A;&#x4E3E;&#x5C5E;&#x6027;
+ &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x5305;&#x542B;&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x7684;&#x6240;&#x6709;Symbol&#x5C5E;&#x6027;</p>
+</li>
+<li><p>Reflect.enumerate()&#xFF0C;&#x8FD4;&#x56DE;&#x6240;&#x6709;for...in&#x5FAA;&#x73AF;&#x4F1A;&#x904D;&#x5386;&#x7684;&#x5C5E;&#x6027;
+ &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;Iterator&#x5BF9;&#x8C61;&#xFF0C;&#x904D;&#x5386;&#x5BF9;&#x8C61;&#x81EA;&#x8EAB;&#x7684;&#x548C;&#x7EE7;&#x627F;&#x7684;&#x6240;&#x6709;&#x53EF;&#x679A;&#x4E3E;&#x5C5E;&#x6027;&#xFF08;&#x4E0D;&#x542B;Symbol&#x5C5E;&#x6027;&#xFF09;&#xFF0C;&#x4E0E;for...in&#x5FAA;&#x73AF;&#x76F8;&#x540C;</p>
+</li>
+</ol>
+<p>&#x5C5E;&#x6027;&#x904D;&#x5386;&#x6B21;&#x5E8F;&#x89C4;&#x5219;&#xFF1A;</p>
+<ol>
+<li>&#x9996;&#x5148;&#x904D;&#x5386;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x540D;&#x4E3A;&#x6570;&#x503C;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x6309;&#x7167;&#x6570;&#x5B57;&#x6392;&#x5E8F;</li>
+<li>&#x5176;&#x6B21;&#x904D;&#x5386;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x540D;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x6309;&#x7167;&#x751F;&#x6210;&#x65F6;&#x95F4;&#x6392;&#x5E8F;</li>
+<li><p>&#x6700;&#x540E;&#x904D;&#x5386;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x540D;&#x4E3A;Symbol&#x503C;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x6309;&#x7167;&#x751F;&#x6210;&#x65F6;&#x95F4;&#x6392;&#x5E8F;</p>
+<p><code>_proto_</code></p>
+<p>&#x7528;&#x6765;&#x8BFB;&#x53D6;&#x6216;&#x8005;&#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x7684;prototype&#x5BF9;&#x8C61;&#xFF0C;&#x5B9E;&#x9645;&#x8C03;&#x7528;&#x7684;&#x662F;Object.prototype.<em>proto</em></p>
+</li>
+</ol>
+<p>Object.getPrototypeOf()&#xFF0C;&#x8BFB;&#x53D6;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;prototype&#x5BF9;&#x8C61;</p>
 <h2 id="&#x5BF9;&#x8C61;&#x7684;&#x65B0;&#x589E;&#x65B9;&#x6CD5;">&#x5BF9;&#x8C61;&#x7684;&#x65B0;&#x589E;&#x65B9;&#x6CD5;</h2>
 <h2 id="symbol">Symbol</h2>
 <p>ES6&#x5F15;&#x5165;&#x7684;&#x4E00;&#x79CD;&#x65B0;&#x7684;&#x539F;&#x59CB;&#x6570;&#x636E;&#x7C7B;&#x578B;Symbol&#xFF0C;&#x8868;&#x793A;&#x72EC;&#x4E00;&#x65E0;&#x4E8C;&#x7684;&#x503C;&#x3002;</p>
@@ -879,12 +926,98 @@ Promise.try()&#xFF0C;
 </ol>
 <h2 id="generator&#x51FD;&#x6570;&#x7684;&#x5F02;&#x6B65;&#x5E94;&#x7528;">Generator&#x51FD;&#x6570;&#x7684;&#x5F02;&#x6B65;&#x5E94;&#x7528;</h2>
 <h2 id="async&#x51FD;&#x6570;">async&#x51FD;&#x6570;</h2>
+<p>async&#x51FD;&#x6570;&#x7684;&#x6267;&#x884C;&#x539F;&#x7406;&#x5C31;&#x662F;&#x5C06;Generator&#x51FD;&#x6570;&#x548C;&#x81EA;&#x52A8;&#x6267;&#x884C;&#x5668;&#xFF0C;&#x5305;&#x88C5;&#x5728;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x91CC;</p>
+<h3 id="&#x57FA;&#x672C;&#x7528;&#x6CD5;">&#x57FA;&#x672C;&#x7528;&#x6CD5;</h3>
+<p>async&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;Promise&#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;then&#x65B9;&#x6CD5;&#x6DFB;&#x52A0;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;&#x5F53;&#x51FD;&#x6570;&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E00;&#x65E6;&#x9047;&#x5230;await&#x5C31;&#x4F1A;&#x5148;&#x8FD4;&#x56DE;&#xFF0C;&#x7B49;&#x5230;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x5B8C;&#x6210;&#xFF0C;&#x518D;&#x63A5;&#x7740;&#x6267;&#x884C;&#x51FD;&#x6570;&#x4F53;&#x5185;&#x540E;&#x9762;&#x7684;&#x8BED;&#x53E5;&#x3002;</p>
+<p>async&#x51FD;&#x6570;&#x5BF9;generator&#x51FD;&#x6570;&#x7684;&#x6539;&#x8FDB;&#xFF1A;</p>
+<ol>
+<li>&#x5185;&#x7F6E;&#x6267;&#x884C;&#x5668;</li>
+<li>&#x66F4;&#x597D;&#x7684;&#x8BED;&#x4E49;</li>
+<li>&#x66F4;&#x5E7F;&#x7684;&#x9002;&#x7528;&#x6027;</li>
+<li>&#x8FD4;&#x56DE;&#x503C;&#x662F;Promise</li>
+</ol>
+<h3 id="&#x8FD4;&#x56DE;promise&#x5BF9;&#x8C61;">&#x8FD4;&#x56DE;Promise&#x5BF9;&#x8C61;</h3>
+<p>async&#x51FD;&#x6570;&#x5185;&#x90E8;return&#x8BED;&#x53E5;&#x8FD4;&#x56DE;&#x7684;&#x503C;&#xFF0C;&#x4F1A;&#x6210;&#x4E3A;then&#x65B9;&#x6CD5;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x3002;</p>
+<p>&#x53EA;&#x6709;&#x5F53;async&#x51FD;&#x6570;&#x5185;&#x90E8;&#x7684;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x6267;&#x884C;&#x5B8C;&#x540E;&#xFF0C;&#x624D;&#x4F1A;&#x6267;&#x884C;then&#x65B9;&#x6CD5;&#x6307;&#x5B9A;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</p>
+<h3 id="await&#x547D;&#x4EE4;">await&#x547D;&#x4EE4;</h3>
+<h3 id="&#x9519;&#x8BEF;&#x5904;&#x7406;&#xFF08;async&#x96BE;&#x70B9;&#xFF09;">&#x9519;&#x8BEF;&#x5904;&#x7406;&#xFF08;async&#x96BE;&#x70B9;&#xFF09;</h3>
+<p>&#x5982;&#x679C;wwait&#x540E;&#x9762;&#x7684;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x51FA;&#x9519;&#xFF0C;&#x90A3;&#x4E48;&#x7B49;&#x540C;&#x4E8E;async&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;promise&#x5BF9;&#x8C61;&#x88AB;reject&#x3002;</p>
+<h3 id="&#x4F7F;&#x7528;&#x6CE8;&#x610F;&#x70B9;">&#x4F7F;&#x7528;&#x6CE8;&#x610F;&#x70B9;</h3>
+<ol>
+<li>&#x6700;&#x597D;&#x628A;await&#x547D;&#x4EE4;&#x653E;&#x5728;try...catch&#x4EE3;&#x7801;&#x5757;&#x4E2D;</li>
+<li>&#x591A;&#x4E2A;await&#x547D;&#x4EE4;&#x540E;&#x9762;&#x7684;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#x7EE7;&#x53D1;&#x5173;&#x7CFB;&#xFF0C;&#x6700;&#x597D;&#x8BA9;&#x5B83;&#x4EEC;&#x540C;&#x65F6;&#x89E6;&#x53D1;</li>
+<li>await&#x547D;&#x4EE4;&#x53EA;&#x80FD;&#x7528;&#x5728;async&#x51FD;&#x6570;&#x4E4B;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x7528;&#x5728;&#x666E;&#x901A;&#x51FD;&#x6570;&#xFF0C;&#x5C31;&#x4F1A;&#x62A5;&#x9519;</li>
+<li>async&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x4FDD;&#x7559;&#x8FD0;&#x884C;&#x5806;&#x6808;</li>
+</ol>
 <h2 id="class&#x7684;&#x57FA;&#x672C;&#x7528;&#x6CD5;">Class&#x7684;&#x57FA;&#x672C;&#x7528;&#x6CD5;</h2>
+<p>&#x7C7B;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x5C31;&#x662F;&#x51FD;&#x6570;&#xFF0C;&#x7C7B;&#x672C;&#x8EAB;&#x5C31;&#x6307;&#x5411;&#x6784;&#x9020;&#x51FD;&#x6570;</p>
+<p>&#x7C7B;&#x7684;&#x6240;&#x6709;&#x65B9;&#x6CD5;&#x90FD;&#x5B9A;&#x4E49;&#x5728;&#x7C7B;&#x7684;proyotype&#x5C5E;&#x6027;&#x4E0A;&#x9762;&#xFF08;&#x5728;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x4E0A;&#x9762;&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#xFF0C;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x8C03;&#x7528;&#x539F;&#x578B;&#x4E0A;&#x7684;&#x65B9;&#x6CD5;&#xFF09;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;
+&#x7C7B;&#x5FC5;&#x987B;&#x4F7F;&#x7528;new&#x8C03;&#x7528;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x62A5;&#x9519;</p>
+<h3 id="constructor&#x65B9;&#x6CD5;">constructor&#x65B9;&#x6CD5;</h3>
+<p>constructor&#x65B9;&#x6CD5;&#x662F;&#x7C7B;&#x7684;&#x9ED8;&#x8BA4;&#x65B9;&#x6CD5;&#xFF0C;&#x901A;&#x8FC7;new&#x547D;&#x4EE4;&#x751F;&#x6210;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x65F6;&#xFF0C;&#x81EA;&#x52A8;&#x8C03;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;</p>
+<p>constructor&#x65B9;&#x6CD5;&#x4E3A;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#xFF0C;&#x9ED8;&#x8BA4;&#x8FD4;&#x56DE;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#xFF08;&#x5373;this&#xFF09;</p>
+<h3 id="getter&#x548C;setter">getter&#x548C;setter</h3>
+<p>&#x5728;&#x7C7B;&#x7684;&#x5185;&#x90E8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;get&#x548C;set&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x5BF9;&#x67D0;&#x4E2A;&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#x5B58;&#x503C;&#x51FD;&#x6570;&#x548C;&#x53D6;&#x503C;&#x51FD;&#x6570;&#xFF0C;&#x62E6;&#x622A;&#x8BE5;&#x5C5E;&#x6027;&#x7684;&#x5B58;&#x53D6;&#x884C;&#x4E3A;</p>
+<p>&#x6CE8;&#x610F;&#x70B9;&#xFF1A;</p>
+<ol>
+<li>&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#xFF0C;&#x7C7B;&#x548C;&#x6A21;&#x5757;&#x7684;&#x5185;&#x90E8;&#xFF0C;&#x9ED8;&#x8BA4;&#x5C31;&#x662F;&#x4E25;&#x683C;&#x6A21;&#x5F0F;</li>
+<li>&#x4E0D;&#x5B58;&#x5728;&#x63D0;&#x5347;&#xFF0C;&#x7C7B;&#x4E0D;&#x5B58;&#x5728;&#x53D8;&#x91CF;&#x63D0;&#x5347;&#xFF0C;</li>
+<li>name&#x5C5E;&#x6027;&#xFF0C;ES6&#x7684;&#x7C7B;&#x53EA;&#x662F;ES5&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x4E00;&#x5C42;&#x5305;&#x88C5;&#xFF0C;&#x6240;&#x4EE5;&#x51FD;&#x6570;&#x7684;&#x8BB8;&#x591A;&#x7279;&#x6027;&#x90FD;&#x88AB;class&#x7EE7;&#x627F;</li>
+<li>generator&#x65B9;&#x6CD5;&#xFF0C;</li>
+<li>this&#x7684;&#x6307;&#x5411;&#xFF0C;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#x5185;&#x90E8;&#x5982;&#x679C;&#x542B;&#x6709;this&#xFF0C;&#x5B83;&#x9ED8;&#x8BA4;&#x6307;&#x5411;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;</li>
+</ol>
+<h3 id="&#x9759;&#x6001;&#x65B9;&#x6CD5;">&#x9759;&#x6001;&#x65B9;&#x6CD5;</h3>
+<p>&#x65B9;&#x6CD5;&#x524D;&#xFF0C;&#x52A0;&#x4E0A;static&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x5C31;&#x8868;&#x793A;&#x8BE5;&#x65B9;&#x6CD5;&#x4E0D;&#x4F1A;&#x88AB;&#x5B9E;&#x4F8B;&#x7EE7;&#x627F;&#xFF0C;&#x800C;&#x662F;&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x7C7B;&#x6765;&#x8C03;&#x7528;&#xFF0C;&#x8FD9;&#x5C31;&#x79F0;&#x4E3A;&#x9759;&#x6001;&#x65B9;&#x6CD5;</p>
+<p>&#x7236;&#x7C7B;&#x7684;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x88AB;&#x5B50;&#x7C7B;&#x7EE7;&#x627F;</p>
+<p>&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x4E5F;&#x53EF;&#x4EE5;&#x4ECE;super&#x5BF9;&#x8C61;&#x4E0A;&#x8C03;&#x7528;</p>
 <h2 id="class&#x7684;&#x7EE7;&#x627F;">Class&#x7684;&#x7EE7;&#x627F;</h2>
+<p>class&#x53EF;&#x4EE5;&#x901A;&#x8FC7;extends&#x5173;&#x952E;&#x5B57;&#x5B9E;&#x73B0;&#x7EE7;&#x627F;&#xFF0C;&#x7EE7;&#x627F;&#x7C7B;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x5B50;&#x7C7B;&#x5FC5;&#x987B;&#x5728;constructor&#x65B9;&#x6CD5;&#x4E2D;&#x8C03;&#x7528;super&#x65B9;&#x6CD5;&#xFF0C;&#x5426;&#x5219;&#x65B0;&#x5EFA;&#x5B9E;&#x4F8B;&#x65F6;&#x4F1A;&#x62A5;&#x9519;&#x3002;&#x56E0;&#x4E3A;&#x5B50;&#x7C7B;&#x81EA;&#x5DF1;&#x7684;this&#x5BF9;&#x8C61;&#xFF0C;&#x5FC5;&#x987B;&#x5148;&#x901A;&#x8FC7;&#x7236;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x5B8C;&#x6210;&#x5851;&#x9020;&#xFF0C;&#x5F97;&#x5230;&#x4E0E;&#x7236;&#x7C7B;&#x540C;&#x6837;&#x7684;&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x52A0;&#x5DE5;&#xFF0C;&#x52A0;&#x4E0A;&#x5B50;&#x7C7B;&#x81EA;&#x5DF1;&#x7684;&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x8C03;&#x7528;super&#x65B9;&#x6CD5;&#xFF0C;&#x5B50;&#x7C7B;&#x5C31;&#x5F97;&#x4E0D;&#x5230;this&#x5BF9;&#x8C61;</p>
 <h2 id="decorator">Decorator</h2>
+<p>&#x88C5;&#x9970;&#x5668;&#x53EA;&#x80FD;&#x7528;&#x4E8E;&#x7C7B;&#x548C;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4E0D;&#x80FD;&#x7528;&#x4E8E;&#x51FD;&#x6570;&#xFF0C;&#x56E0;&#x4E3A;&#x5B58;&#x5728;&#x51FD;&#x6570;&#x63D0;&#x5347;&#x3002;</p>
+<h3 id="&#x7C7B;&#x7684;&#x88C5;&#x9970;&#x5668;">&#x7C7B;&#x7684;&#x88C5;&#x9970;&#x5668;</h3>
+<p>&#x7C7B;&#x7684;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x7528;&#x4E8E;&#x4FEE;&#x6539;&#x7C7B;&#x7684;&#x884C;&#x4E3A;</p>
+<p>&#x88C5;&#x9970;&#x5668;&#x662F;&#x7F16;&#x8BD1;&#x65F6;&#x6267;&#x884C;&#x7684;&#x51FD;&#x6570;</p>
+<p>&#x88C5;&#x9970;&#x5668;&#x51FD;&#x6570;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5C31;&#x662F;&#x6240;&#x8981;&#x4FEE;&#x9970;&#x7684;&#x76EE;&#x6807;&#x7C7B;</p>
+<p>&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x4FEE;&#x9970;class&#x7684;&#x53C2;&#x6570;</p>
+<p>demo&#xFF1A;</p>
+<pre class="language-"><code>function testable(target) {
+  target.prototype.isTestable = true;
+}
+
+@testable
+class MyTestableClass {}
+
+let obj = new MyTestableClass();
+obj.isTestable // true
+</code></pre><h3 id="&#x65B9;&#x6CD5;&#x7684;&#x88C5;&#x9970;&#x5668;">&#x65B9;&#x6CD5;&#x7684;&#x88C5;&#x9970;&#x5668;</h3>
+<p>&#x88C5;&#x9970;&#x5668;&#x4F5C;&#x7528;&#xFF1A;&#x6CE8;&#x91CA;&#x548C;&#x7C7B;&#x578B;&#x68C0;&#x67E5;</p>
+<p>&#x4FEE;&#x9970;&#x5668;&#x4F1A;&#x4FEE;&#x6539;&#x5C5E;&#x6027;&#x7684;&#x63CF;&#x8FF0;&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x88AB;&#x4FEE;&#x6539;&#x7684;&#x63CF;&#x8FF0;&#x5BF9;&#x8C61;&#x518D;&#x7528;&#x6765;&#x5B9A;&#x4E49;&#x5C5E;&#x6027;&#x3002;</p>
 <h2 id="module&#x7684;&#x8BED;&#x6CD5;">Module&#x7684;&#x8BED;&#x6CD5;</h2>
+<p>&#x6A21;&#x5757;&#x7684;&#x4E3B;&#x8981;2&#x4E2A;&#x547D;&#x4EE4;&#xFF1A;export&#x548C;import</p>
+<h3 id="&#x4E25;&#x683C;&#x6A21;&#x5F0F;">&#x4E25;&#x683C;&#x6A21;&#x5F0F;</h3>
+<h3 id="export">export</h3>
+<p>export&#x7528;&#x4E8E;&#x89C4;&#x5B9A;&#x6A21;&#x5757;&#x7684;&#x5BF9;&#x5916;&#x63A5;&#x53E3;&#xFF0C;</p>
+<p>export&#x8F93;&#x51FA;&#x7684;&#x53D8;&#x91CF;&#x5C31;&#x662F;&#x672C;&#x6765;&#x7684;&#x540D;&#x5B57;</p>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;as&#x5173;&#x952E;&#x5B57;&#x91CD;&#x540D;</p>
+<p><code>export default</code> &#x4E3A;&#x6A21;&#x5757;&#x6307;&#x5B9A;&#x9ED8;&#x8BA4;&#x8F93;&#x51FA;&#xFF08;&#x53D8;&#x91CF;&#x6216;&#x8005;&#x65B9;&#x6CD5;&#xFF09;</p>
+<h3 id="import">import</h3>
+<p>import&#x7528;&#x4E8E;&#x8F93;&#x5165;&#x5176;&#x4ED6;&#x6A21;&#x5757;&#x63D0;&#x4F9B;&#x7684;&#x529F;&#x80FD;</p>
+<p>import&#x547D;&#x4EE4;&#x4F7F;&#x7528;as&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x5C06;&#x8F93;&#x5165;&#x7684;&#x53D8;&#x91CF;&#x91CD;&#x547D;&#x540D;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;</p>
+<ol>
+<li>import&#x547D;&#x4EE4;&#x8F93;&#x5165;&#x7684;&#x53D8;&#x91CF;&#x90FD;&#x662F;&#x53EA;&#x8BFB;&#x7684;</li>
+<li>&#x6A21;&#x5757;&#x7684;&#x6574;&#x4F53;&#x52A0;&#x8F7D;&#xFF0C;&#x4F7F;&#x7528;<code>*</code>&#x6307;&#x5B9A;&#x5BF9;&#x8C61;</li>
+</ol>
+<p><code>import()</code>&#x51FD;&#x6570;&#x4F5C;&#x7528;&#xFF1A;</p>
+<ol>
+<li>&#x6309;&#x9700;&#x52A0;&#x8F7D;</li>
+<li>&#x6761;&#x4EF6;&#x52A0;&#x8F7D;</li>
+<li>&#x52A8;&#x6001;&#x7684;&#x6A21;&#x5757;&#x8DEF;&#x5F84;</li>
+</ol>
 <h2 id="module&#x7684;&#x52A0;&#x8F7D;&#x5B9E;&#x73B0;">Module&#x7684;&#x52A0;&#x8F7D;&#x5B9E;&#x73B0;</h2>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> caicai&#xA0;&#x7248;&#x6743;&#x6240;&#x6709;&#xA0;&#xA0;https://github.com/shmilyCai/reading </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <span>&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;</span> 2018-12-29 11:24:58 </span> </footer>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> caicai&#xA0;&#x7248;&#x6743;&#x6240;&#x6709;&#xA0;&#xA0;https://github.com/shmilyCai/reading </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <span>&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;</span> 2019-01-04 13:47:14 </span> </footer>
                                 
                                 </section>
                             
@@ -927,7 +1060,7 @@ Promise.try()&#xFF0C;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ECMAScript6入门-阮一峰","level":"1.4","depth":1,"next":{"title":"图解HTTP","level":"1.5","depth":1,"path":"2018/http.md","ref":"2018/http.md","articles":[]},"previous":{"title":"迈向Angular2：基于TypeScript的高性能SPA框架","level":"1.3","depth":1,"path":"2018/angular2.md","ref":"2018/angular2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-footer-ex","prism","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"1","family":"sans","theme":"night"},"pluginsConfig":{"prism":{},"livereload":{},"page-footer-ex":{"copyright":"caicai&nbsp;版权所有&nbsp;&nbsp;https://github.com/shmilyCai/reading","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<span>该文件修订时间</span>"},"search":{},"books":{"prism_themes":["prismjs/themes/prism-tomorrow.css"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white","family":"msyh","size":2},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":10,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"小仙女的读书笔记","variables":{},"title":"小仙女的读书笔记","links":{"sharing":{"all":false,"facebook":false,"google":false,"twitter":false,"weibo":false},"sidebar":{}},"gitbook":"*","description":"小仙女的读书笔记","extension":null},"file":{"path":"2018/es6.md","mtime":"2018-12-29T03:24:58.976Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-29T03:27:16.132Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ECMAScript6入门-阮一峰","level":"1.5","depth":1,"next":{"title":"图解HTTP","level":"1.6","depth":1,"path":"2018/http.md","ref":"2018/http.md","articles":[]},"previous":{"title":"迈向Angular2：基于TypeScript的高性能SPA框架","level":"1.4","depth":1,"path":"2018/angular2.md","ref":"2018/angular2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-footer-ex","prism","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"1","family":"sans","theme":"night"},"pluginsConfig":{"prism":{},"livereload":{},"page-footer-ex":{"copyright":"caicai&nbsp;版权所有&nbsp;&nbsp;https://github.com/shmilyCai/reading","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<span>该文件修订时间</span>"},"search":{},"books":{"prism_themes":["prismjs/themes/prism-tomorrow.css"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white","family":"msyh","size":2},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":10,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"小仙女的读书笔记","variables":{},"title":"小仙女的读书笔记","links":{"sharing":{"all":false,"facebook":false,"google":false,"twitter":false,"weibo":false},"sidebar":{}},"gitbook":"*","description":"小仙女的读书笔记","extension":null},"file":{"path":"2018/es6.md","mtime":"2019-01-04T05:47:14.614Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-06T12:37:29.916Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
