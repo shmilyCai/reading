@@ -139,15 +139,115 @@ this，获取当前组件
  
 ### 样式处理
 
+#### CSS Modules
+
+解决的问题：
+ css样式导入与导出
+
+遇到的问题：
+1. 全局污染
+2. 命名混乱
+3. 依赖管理不彻底
+4. 无法共享变量
+5. 代码压缩不彻底
+
+模块化方案：
+
+```
+:imoport
+:export
+```
+compose组合样式
+
 ### 组件间通信
+
+1. 父组件向子组件通信
+	
+	props
+
+2. 子组件向父组件通信
+
+	回调函数
+	自定义事件机制
+
+3. 没有嵌套关系的组件之间通信
+
+	EventEmitter（利用全局对象来保存事件，用广播的方式去处理事件）
+
+4. 跨级组件通信
+
+	context
 
 ### 组件间抽象
 
+#### mixin
+
+用于组合公共组件，实现继承
+
+##### 高阶组件
+
+高阶函数：这种函数接受函数作为输入，或者是输出一个函数
+
+高阶组件：接受react组件作为输入，输出一个新的React组件
+
+实现方法：
+
+1. 属性代理，高阶组件通过被包裹的react组件来操作props
+
+2. 反向继承，高阶组件继承于被包裹的react组件
+
+	特点：
+	渲染劫持，
+	控制state
+
 ### 组件间性能优化
+
+#### 纯函数
+
+构成：
+1. 给定相同的输入，总是返回相同的输出
+2. 过程没有副作用
+3. 没有额外的状态依赖
+
+#### PureRender
+
+PureRender中的Pure指的就是组件满足纯函数的条件，即组件的渲染是被相同的props和state渲染进而得到相同的结果
+
+#### Immutable Data
+ 
+Immutable Data就是一旦创建，就不能再更改的数据
+
+Immutable 实现原理是持久化的数据结构，即使用旧数据创建新数据时，要保证旧数据同时可用而且不变。
+
+为了避免深拷贝把所有节点都复制一篇带来的性能损耗，Immutable使用了结构共享，即如果对象树中一个节点发生变化，只修改这个节点和受它影响的父节点，其他节点则进行共享。
+
+重要数据结构说明：
+1. Map，键值对集合，对应于Object
+2. List，有序可重复的列表，对应于Array
+3. ArraySet，无序并且不可重复的列表
+
+优点：
+1. 降低“可变”带来的复杂度
+2. 节省内存
+3. 撤销/重做，复制/粘贴，实现简单
+4. 并发安全
+5. 拥抱函数式编程
+
+缺点：
+1. 与原生对象很难区分
+2. 
 
 ### 动画
 
 ### 测试
+
+Jest特点：
+1. 自动找到测试
+2. 自动mock模拟依赖包，达到单元测试的目的
+3. 并不需要真实DOM环境执行，而是JSDOM模拟的DOM
+4. 多进程并行执行测试
+
+#### 自动化测试
 
 ## 解读React源码
 
@@ -183,6 +283,186 @@ Virtual DOM称为ReactNode，类型为：
 * ReactFragment，
 
 * eactText
+
+
+
+------ 未完成
+
+
+
+
+
+## 4. 认识Flux架构模式
+
+fetch API，由WHATWG提出的新一代浏览器Ajax请求标准，目前已经获得主流浏览器的支持
+
+fetch的主要特点是运用promise来对请求作了包装，
+
+### React独立结构
+
+### MV * 与Flux
+
+#### MVC
+
+MVC是一种架构设计模式，通过关注数据界面分离，来鼓励改进应用程序结构。
+
+MVC强制将业务数据（Model）与用户界面（View）隔离，用控制器（Controller）管理逻辑和用户输入。
+
+MVC模式中的3种角色：
+
+1. Model
+
+Model负责保存应用数据，和后端交互同步应用数据或者校验数据。
+
+主要与业务数据有关，与应用内交互状态无关
+
+2. View
+
+View是Model的可视化表示，表示当前状态的视图。
+
+前端View负责构建和维护DOM元素
+
+3. Controller
+
+负责连接View和Model，Model的任何改变会应用到View中，View的操作会通过Controller应用到Model中
+
+MVC缺点：
+项目越大后，数据流向很混乱
+
+#### MVVM
+
+VM（ViewModel）代替了C（Controller），其关键的改进是数据绑定
+
+View的数据状态发生变化可以直接影响VM，反之亦然，angularJS的核心特色之一。
+
+
+
+#### Flux的解决方案
+
+Flux提出主要是针对现有前端MVC框架的局限总结出来的一套基于dispatcher的前端应用架构模式。
+
+Flux的核心思想就是数据和逻辑永远单向流动
+
+### Flux的基本概念
+
+3大组成部分：
+
+1. dispatcher，负责分发事件
+
+	register方法用来注册一个监听器，而dispatch方法用来分发一个action
+
+	action是一个普通的js对象，一般包含type，payload等字段，用于描述一个事件以及需要改变的相关数据
+
+2. store，负责保存数据，同时响应事件并更新数据
+
+	store负责保存数据，并定义修改数据的逻辑，同时调用dispatcher的register方法将自己注册为一个监听器。
+
+	store对外只暴露getter，只能读取store中的数据而不能进行任何修改
+
+3. controller-view
+
+	主要进行store与react组件（即view层）之间的绑定，定义数据更新以及传递的方式
+
+4. view，负责订阅store中的数据，并使用这些数据渲染相应的页面	
+
+	在flux中，view除了显示界面，还约定如果界面操作需要修改数据，则必须使用dispatcher分发一个action
+
+5. actionCreater
+
+	用来创造action的
+	
+
+### Flux应用实例
+
+### 解读Flux
+
+Flux的中心化控制让所有的请求与改变都只能通过action发出，统一由dispatcher来分配。
+
+优点是保持高度简洁，不需要关心太多的逻辑，只需要关心传入的数据，中心化还控制了所有数据，发生问题时可以方便查询。
+
+缺点：冗余代码太多
+
+## 5. 深入Redux应用架构
+
+三大原则：
+1. 单一数据源
+
+	使用单一数据源的好处在于整个应用状态都保存在一个对象中，这样我们随时可以提取出整个应用的状态进行持久化。
+
+2. 状态是只读的
+
+	reducer的功能是根据当前触发的action对当前应用的状态（state）进行迭代，这里并没有直接修改应用的状态，而是返回了一份全新的状态
+
+3. 状态修改均由纯函数完成
+
+### 简介
+
+核心API：createSore，
+
+#### createSore，
+
+包含4个方法：
+1. getState()，获取store中当前的状态
+2. dispatch(action)，分发一个action，并返回这个action，唯一能改变store中数据的方式
+3. subscribe(listener)，注册一个监听者，它在store发生变化时被调用
+4. replaceReducer(nextReducer)，更新当前store里的reducer，只在开发模式中调用该方法
+
+#### react-redux，
+
+redux官方提供的react绑定，为什么存在？前端架构趋势，尽量做到平台无关
+
+提供了一个组件和一个api绑定redux和react进行绑定，
+
+`<Provider/>`，接受一个store作为props，是整个redux应用的顶层组件
+
+connect()，提供了在整个React应用的任意组件中获取store中数据的功能
+
+### middleware
+
+分类处理action的机会，
+
+Redux中一个简单的同步数据流动场景，点击button后，在回调中分发一个action，reducer收到action后，更新state并通知view重新渲染。
+
+柯里化函数是一种使用匿名单参数函数来实现多参数函数的方法。
+
+### redux异步流
+
+1. redux-thunk
+
+Thunk函数实现上就是针对多参数的currying以实现对函数的惰性求值。任何函数，只要参数有回调函数，就能写成Thunk函数的形式。
+
+Thunk 函数替换的不是表达式，而是多参数函数，将其替换成单参数的版本，且只接受回调函数作为参数
+
+
+2. redux-promise
+
+3. redux-composable-fetch
+
+middle处理复杂异步流
+
+1. 轮询
+2. 多异步串联
+3. 
+
+### redux与路由
+
+路由的基本原理：即是保证View和URL同步，而View可以看成是资源的一种表现
+
+### Redux应用实例
+
+## 6. Redux高阶运用
+
+## 7. React服务端渲染
+
+## 8. 玩转React可视化
+
+
+
+
+
+
+
+
 
 
 
