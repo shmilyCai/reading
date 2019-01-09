@@ -61,6 +61,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="../2019/dissecting_react_redux.html" />
+    
     
 
     </head>
@@ -144,7 +146,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" >
+        <li class="chapter " data-level="1.2.3" data-path="../2019/dissecting_react_redux.html">
+            
+                <a href="../2019/dissecting_react_redux.html">
+            
+                    
+                    深入浅出React和Redux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" >
             
                 <span>
             
@@ -157,7 +172,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="angular2.html">
+        <li class="chapter " data-level="1.2.5" data-path="angular2.html">
             
                 <a href="angular2.html">
             
@@ -170,7 +185,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" >
+        <li class="chapter " data-level="1.2.6" data-path="../2019/the_complete_book_on_angular2.html">
+            
+                <a href="../2019/the_complete_book_on_angular2.html">
+            
+                    
+                    Angular权威教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" >
             
                 <span>
             
@@ -183,7 +211,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.6" data-path="es6.html">
+        <li class="chapter " data-level="1.2.8" data-path="es6.html">
             
                 <a href="es6.html">
             
@@ -196,7 +224,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.7" data-path="js_functional.html">
+        <li class="chapter " data-level="1.2.9" data-path="js_functional.html">
             
                 <a href="js_functional.html">
             
@@ -209,7 +237,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.8" data-path="js_the_good_part.html">
+        <li class="chapter " data-level="1.2.10" data-path="js_the_good_part.html">
             
                 <a href="js_the_good_part.html">
             
@@ -222,7 +250,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.9" data-path="js_professional.html">
+        <li class="chapter " data-level="1.2.11" data-path="js_professional.html">
             
                 <a href="js_professional.html">
             
@@ -235,7 +263,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.10" >
+        <li class="chapter " data-level="1.2.12" >
             
                 <span>
             
@@ -640,9 +668,28 @@ shared&#xFF08;event&#xFF0C;reconciler&#xFF09;
 <p>&#x8DEF;&#x7531;&#x7684;&#x57FA;&#x672C;&#x539F;&#x7406;&#xFF1A;&#x5373;&#x662F;&#x4FDD;&#x8BC1;View&#x548C;URL&#x540C;&#x6B65;&#xFF0C;&#x800C;View&#x53EF;&#x4EE5;&#x770B;&#x6210;&#x662F;&#x8D44;&#x6E90;&#x7684;&#x4E00;&#x79CD;&#x8868;&#x73B0;</p>
 <h3 id="redux&#x5E94;&#x7528;&#x5B9E;&#x4F8B;">Redux&#x5E94;&#x7528;&#x5B9E;&#x4F8B;</h3>
 <h2 id="6-redux&#x9AD8;&#x9636;&#x8FD0;&#x7528;">6. Redux&#x9AD8;&#x9636;&#x8FD0;&#x7528;</h2>
+<h3 id="&#x9AD8;&#x9636;reducer">&#x9AD8;&#x9636;reducer</h3>
+<p>reducer&#x662F;&#x7EAF;&#x51FD;&#x6570;&#xFF0C;&#x804C;&#x8D23;&#x662F;&#x6839;&#x636E;previousState&#x548C;action&#x8BA1;&#x7B97;&#x51FA;&#x65B0;&#x7684;state</p>
+<p>&#x9AD8;&#x9636;&#x51FD;&#x6570;&#x662F;&#x6307;&#x5C06;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x6216;&#x8005;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x51FD;&#x6570;</p>
+<p>&#x9AD8;&#x9636;reducer&#x5C31;&#x662F;&#x6307;&#x5C06;reducer&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x6216;&#x8005;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x51FD;&#x6570;</p>
+<h3 id="redux&#x4E0E;&#x8868;&#x5355;">redux&#x4E0E;&#x8868;&#x5355;</h3>
+<ol>
+<li>redux-form-utils</li>
+<li>redux-form</li>
+</ol>
 <h2 id="7-react&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;">7. React&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;</h2>
+<p>&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#xFF0C;&#x5373;&#x524D;&#x7AEF;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x5728;&#x670D;&#x52A1;&#x7AEF;&#x4F5C;&#x6E32;&#x67D3;&#xFF0C;&#x8FDB;&#x800C;&#x8FBE;&#x5230;&#x5728;&#x540C;&#x6B65;&#x8BF7;&#x6C42;HTML&#x65F6;&#xFF0C;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x6E32;&#x67D3;&#x597D;&#x7684;&#x9875;&#x9762;</p>
+<p>&#x4F18;&#x70B9;&#xFF1A;</p>
+<ol>
+<li>&#x5229;&#x4E8E;SEO</li>
+<li>&#x52A0;&#x901F;&#x9996;&#x5C4F;&#x6E32;&#x67D3;
+&#x670D;&#x52A1;&#x7AEF;&#x548C;&#x5BA2;&#x6237;&#x7AEF;&#x53EF;&#x4EE5;&#x5171;&#x4EAB;&#x67D0;&#x4E9B;&#x4EE3;&#x7801;&#xFF0C;&#x907F;&#x514D;&#x91CD;&#x590D;&#x5B9A;&#x4E49;</li>
+</ol>
+<p>ReactDom&#xFF0C;react&#x6E32;&#x67D3;&#x5230;DOM&#x4E2D;&#x7684;&#x65B9;&#x6CD5;</p>
+<p>React.renderToString&#xFF0C;&#x628A;react&#x5143;&#x7D20;&#x8F6C;&#x6210;&#x4E00;&#x4E2A;HTML&#x5B57;&#x7B26;&#x4E32;&#x5E76;&#x5728;&#x670D;&#x52A1;&#x7AEF;&#x6807;&#x8BC6;reactid</p>
+<p>React.renderToStaticMarkup&#xFF0C;&#x7B80;&#x5316;&#x7248;&#x672C;&#x7684;renderToString</p>
 <h2 id="8-&#x73A9;&#x8F6C;react&#x53EF;&#x89C6;&#x5316;">8. &#x73A9;&#x8F6C;React&#x53EF;&#x89C6;&#x5316;</h2>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> caicai&#xA0;&#x7248;&#x6743;&#x6240;&#x6709;&#xA0;&#xA0;https://github.com/shmilyCai/reading </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <span>&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;</span> 2019-01-08 22:53:41 </span> </footer>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> caicai&#xA0;&#x7248;&#x6743;&#x6240;&#x6709;&#xA0;&#xA0;https://github.com/shmilyCai/reading </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <span>&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;</span> 2019-01-09 12:51:28 </span> </footer>
                                 
                                 </section>
                             
@@ -670,6 +717,10 @@ shared&#xFF08;event&#xFF0C;reconciler&#xFF09;
             
                 
                 
+                <a href="../2019/dissecting_react_redux.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 深入浅出React和Redux">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
             
         
     </div>
@@ -677,7 +728,7 @@ shared&#xFF08;event&#xFF0C;reconciler&#xFF09;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"深入React技术栈","level":"1.2.2","depth":2,"next":{"title":"--- angular ---","level":"1.2.3","depth":2,"ref":"","articles":[]},"previous":{"title":"--- react ---","level":"1.2.1","depth":2,"ref":"","articles":[]},"dir":"ltr"},"config":{"plugins":["page-footer-ex","prism","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"1","family":"sans","theme":"night"},"pluginsConfig":{"prism":{},"livereload":{},"page-footer-ex":{"copyright":"caicai&nbsp;版权所有&nbsp;&nbsp;https://github.com/shmilyCai/reading","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<span>该文件修订时间</span>"},"search":{},"books":{"prism_themes":["prismjs/themes/prism-tomorrow.css"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white","family":"msyh","size":2},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":10,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"小仙女的读书笔记","variables":{},"title":"小仙女的读书笔记","links":{"sharing":{"all":false,"facebook":false,"google":false,"twitter":false,"weibo":false},"sidebar":{}},"gitbook":"*","description":"小仙女的读书笔记","extension":null},"file":{"path":"2018/react.md","mtime":"2019-01-08T14:53:41.056Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-08T14:54:25.673Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"深入React技术栈","level":"1.2.2","depth":2,"next":{"title":"深入浅出React和Redux","level":"1.2.3","depth":2,"path":"2019/dissecting_react_redux.md","ref":"2019/dissecting_react_redux.md","articles":[]},"previous":{"title":"--- react ---","level":"1.2.1","depth":2,"ref":"","articles":[]},"dir":"ltr"},"config":{"plugins":["page-footer-ex","prism","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"1","family":"sans","theme":"night"},"pluginsConfig":{"prism":{},"livereload":{},"page-footer-ex":{"copyright":"caicai&nbsp;版权所有&nbsp;&nbsp;https://github.com/shmilyCai/reading","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<span>该文件修订时间</span>"},"search":{},"books":{"prism_themes":["prismjs/themes/prism-tomorrow.css"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white","family":"msyh","size":2},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":10,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"小仙女的读书笔记","variables":{},"title":"小仙女的读书笔记","links":{"sharing":{"all":false,"facebook":false,"google":false,"twitter":false,"weibo":false},"sidebar":{}},"gitbook":"*","description":"小仙女的读书笔记","extension":null},"file":{"path":"2018/react.md","mtime":"2019-01-09T04:51:28.579Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-09T05:23:26.257Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

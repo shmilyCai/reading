@@ -1,18 +1,20 @@
 # Summary
 * [Introduction](README.md)
 * [前端](summary/web.md)
-    <!-- * [深入浅出React和Redux](2019/dissecting_react_redux.md) -->
+    
     <!-- * [javascript权威指南](2019/javascript_the_definitive_guide.md) -->
     <!-- * [深入浅出node.js](2019/node_js.md) -->
     <!-- * [精通正则表达式](2019/regexp.md) -->
-    <!-- * [Angular权威教程](2019/the_complete_book_on_angular2.md) -->
+   
     <!-- * [webkit技术内幕](2019/webkit.md) -->
     <!-- * [第一本docker书](2019/the_docker_book.md) -->
     <!-- * [学习JavaScript数据结构与算法](2019/js_data_structures.md) -->
     * --- react ---
     * [深入React技术栈](2018/react.md)
+    * [深入浅出React和Redux](2019/dissecting_react_redux.md)
     * --- angular ---
     * [迈向Angular2：基于TypeScript的高性能SPA框架](2018/angular2.md)
+    * [Angular权威教程](2019/the_complete_book_on_angular2.md)
     * --- javascript ---
 	* [ECMAScript6入门-阮一峰](2018/es6.md)
 	* [Javascript函数式编程](2018/js_functional.md)

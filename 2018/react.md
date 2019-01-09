@@ -452,7 +452,33 @@ middle处理复杂异步流
 
 ## 6. Redux高阶运用
 
+### 高阶reducer
+
+reducer是纯函数，职责是根据previousState和action计算出新的state
+
+高阶函数是指将函数作为参数或者返回值的函数
+
+高阶reducer就是指将reducer作为参数或者返回值的函数
+
+### redux与表单
+
+1. redux-form-utils
+2. redux-form
+
 ## 7. React服务端渲染
+
+服务端渲染，即前端代码可以在服务端作渲染，进而达到在同步请求HTML时，直接返回渲染好的页面
+
+优点：
+1. 利于SEO
+2. 加速首屏渲染
+服务端和客户端可以共享某些代码，避免重复定义
+
+ReactDom，react渲染到DOM中的方法
+
+React.renderToString，把react元素转成一个HTML字符串并在服务端标识reactid
+
+React.renderToStaticMarkup，简化版本的renderToString
 
 ## 8. 玩转React可视化
 
