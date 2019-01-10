@@ -249,7 +249,7 @@ Jest特点：
 
 #### 自动化测试
 
-## 解读React源码
+## 3. 解读React源码
 
 ### 目录介绍
 
@@ -270,6 +270,13 @@ renderes，分为dom和shared
 	DOM（client，server，shared）
 	shared（event，reconciler）
 
+
+Virtual DOM，是JavaScript对象
+
+主要包括Virtual DOM模型（Virtual DOM机制是将更新的数据实时反应到UI上），生命周期的维护，性能高效的diff算法和Virtual DOM展示为原生DOM的patch方法
+
+当数据更新时，会通过diff寻找到需要变更的DOM节点，并只对变化的部分进行实际的浏览器DOM更新，而不是重新渲染整个DOM树。
+
 ### Virtual DOM模型
 
 构建Virtual DOM模型，所需要元素：标签名，节点属性（包含样式，属性，事件），子节点，标识id
@@ -284,12 +291,65 @@ Virtual DOM称为ReactNode，类型为：
 
 * eactText
 
+Virtunal DOM模型通过createElement创建虚拟元素。
+
+### 生命周期
+
+React的主要是通过构建可复用组件来构建用户界面。
+
+所谓组件，其实就是有限状态机，通过状态渲染对应的界面，且每个组件都有自己的生命周期，它规定了组件的状态和方法需要在哪个阶段改变和执行。
+
+有限状态机，表示有限个状态以及在这些状态之间的转移和动作等行为的模型。一般通过状态，事件，转换和动作来描述有限状态机。
+
+通过管理状态实现对组件的管理。
 
 
------- 未完成
+#### 无状态组件
+
+只接收props渲染生成DOM结构，没有状态变化
+
+### duff算法
+
+计算一棵树形结构转换成另一棵树形结构的最少操作。
+
+传统diff算法：通过循环递归对节点进行依次对比。
+
+React将Virtual DOM树转换成actual DOM树的最少操作的过程称为调和。
+
+1. diff策略
+
+	1. Web UI中DOM节点跨层级的移动操作特别少，可以忽略不计
+	2. 拥有相同类的两个组件将会生成相似的树形结构，拥有不同类的两个组件将会生成不同的树形结构
+	3. 对于同一层级的一组子节点，它们可以通过唯一id进行区分
+
+2. tree diff
+
+	React对树的算法进行了简洁明了的优化，即对树进行分层比较，两棵树只会对同一层次的节点进行比较
+
+3. component diff
+
+	如果是同一类型的组件，按照原策略继续比较Virtual DOM树即可
+	如果不是，则将该组件判断为dirty component，从而替换整个组件下的所有子节点
+	对于同一类型的组件，有可能其Virtual DOM没有任何变化。
+
+4. element diff
+
+	当节点处于同一层级时，diff提供了3种节点操作，分别为INSERT_MARKUP（插入），MOVE_EXISTING（移动）和REMOVE_NODE（删除）
+
+	INSERT_MARKUP，新的组件类型不在旧集合里，即全新的节点，需要对新节点执行插入操作
+
+	MOVE_EXISTING， 旧集合中有新组件类型，而且element是可更新的类型，
+
+	REMOVE_NODE，旧组件类型，在新集合里也有，但对应的element不同则不能直接复用和更新，需要执行删除操作。
 
 
+优化策略：允许开发者对同一层级的同组子节点，添加唯一key进行区分。
 
+### React Patch
+
+Patch，就是将tree diff计算出来的DOM差异队列更新到真实的DOM节点上，最终让浏览器能够渲染出更新的数据。
+
+差异队列实现
 
 
 ## 4. 认识Flux架构模式
