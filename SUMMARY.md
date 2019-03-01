@@ -33,6 +33,7 @@
 <!-- * [心理学](summary/psychology.md) -->
 * [其他](summary/others.md)
     * [软技能，代码之外的生存能力](2019/soft_skills.md)
+    * [如何高效学习](2019/learn_more_study_less.md)
 
 
 
