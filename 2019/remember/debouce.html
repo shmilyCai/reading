@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> 防抖动代码模拟实现</title>
+    <style>
+        #container {
+            width: 100%;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            color: #fff;
+            background-color: #444;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+</body>
+<script>
+    var count = 1;
+    var container = document.getElementById('container');
+
+    function getUserAction() {
+        container.innerHTML = count++;
+    }
+
+    container.onmousemove = debouce(getUserAction, 1000, true);
+
+
+    /**
+    fun 待执行的函数
+    wait 等待的时间
+    immediate 是否立刻执行
+    */
+    function debouce(fun, wait, immediate) {
+        var timeout;
+        var context;
+        var args;
+        var debouced =  function () {
+            context = this;
+            args = arguments;
+            if (timeout) {
+                clearTimeout(timeout);
+            }
+            if (immediate) {
+
+                //如果以及执行过，不再执行
+                var callNow = !timeout;
+                timeout = setTimeout(function () {
+                    timeout = null;
+                }, wait);
+                if (callNow) fun.apply(context, args);
+            } else {
+                timeout = setTimeout(function () {
+                    fun.apply(context, args);
+                }, wait);
+            }
+
+        }
+
+        //设置防抖函数的取消操作
+        debouced.cancle = function(){
+            clearTimeout(timeout);
+            timeout = null;
+        }
+
+        return debouced;
+    }
+</script>
+
+</html>

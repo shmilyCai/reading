@@ -20,161 +20,201 @@
 delete运算符可以用来删除对象的属性，如果对象包含该属性，那么该属性就会被删除
 
 
-##  方法
+## Array
 
-### Array
+### 属性
 
-concat(item...)
+.length，
 
-	产生一个新数组，包含一份array的浅复制并把一个或者多个参数item附加在其中
+.prototype，
 
-join(separator) 
+### 方法
 
-	把一个array构造成一个字符串，接着用一个separator分隔符把他们连接在一起，默认separator是逗号“，”
+Array.form()，
 
-pop()
+Array.isArray(),
 
-	移除array中的最后一个元素并返回该元素
+Array.of()，
 
-push(item...)
+.concat(item...)，产生一个新数组，包含一份array的浅复制并把一个或者多个参数item附加在其中
 
-	把一个或者多个参数item附加到一个数组的尾部
+.copyWithin()
 
-reverse()
+.entries()
 
-	反转array里的元素的顺序
+.every()
 
-shift()
+.fill()
 
-	移除数据array中的第一个元素并返回该元素
+.filter()
 
-slice()
+.find()
 
-	对array中的一段做浅复制
+.findIndex()
 
-sort()
+.forEach()
 
-	对array中的内容进行排序
+.includes()
 
-splice(start, deleteCount, item...)
+.indexOf()
 
-	从array中移除一个或者多个元素，并用item替换它们，
+.join(separator)，把一个array构造成一个字符串，接着用一个separator分隔符把他们连接在一起，默认separator是逗号“，”
 
-	最主要的用处是从一个数组中删除元素
+.keys()
 
-unshift()
+.lastIndexOf()
 
-	把元素添加到数组中，把item插入到array的开始部分
+.map()
 
+.pop()，移除array中的最后一个元素并返回该元素
 
-### Function
+.push(item...)，把一个或者多个参数item附加到一个数组的尾部
 
-apply(thisArg, argArray)
+.reduce()
 
-	apply调用function，传递一个会被绑定到this上的对象和一个可选的数组作为参数
+.reverse()，反转array里的元素的顺序
 
-### Number
+.shift()，移除数据array中的第一个元素并返回该元素
 
-toExponential(fractionDigits)
+.slice()，对array中的一段做浅复制
 
-	把number转换成一个指数形式的字符串
+.some()
 
-toFixed(fractionDigits)
+.sort()，对array中的内容进行排序
 
-	把number转换成为一个十进制数形式的字符串
+.splice(start, deleteCount, item...)，从array中移除一个或者多个元素，并用item替换它们，最主要的用处是从一个数组中删除元素
 
-toPrecision(precision)
+.toString()
 
-	把number转换成为一个十进制数形式的字符串
+.unshift()，把元素添加到数组中，把item插入到array的开始部分
 
-toString(radix)
+.values()
 
-	把number转换成为一个字符串
+## Function
 
-### Object
+### 属性
 
-.hasOwnProperty(name)
+.arguments
+.caller
+.length
+.prototype
+.name
 
-	 如果object包含一个名为name的属性，那么hasOwnProperty方法返回true，原型链中的同名属性是不会被检查的
+### 方法
 
-### RegExp
+.apply(thisArg, argArray)，apply调用function，传递一个会被绑定到this上的对象和一个可选的数组作为参数
 
-.exec(string)
+.bind()
 
-	是使用正则表达式的最强大防范，成功的匹配regexp和字符串string，返回一个数组
+.call()
 
-.test(string)
+.toSource()
 
-	使用正则表达式的最简单防范，如果该regexp匹配string，返回true，否则，返回false
+.toString()
 
-### String
+## Number
 
-.charAt(pos)
+toExponential(fractionDigits)，把number转换成一个指数形式的字符串
 
-	在string中pos位置出的字符串，如果pos小于0或者大于等于字符串的长度，则返回空字符串
+toFixed(fractionDigits)，把number转换成为一个十进制数形式的字符串
 
-.charCodeAt(pos)
+toPrecision(precision)，把number转换成为一个十进制数形式的字符串
 
-	同charAt意义，返回的是以整数形式表示的在string中的pos位置处的字符的字符码位
+toString(radix)，把number转换成为一个字符串
 
-.indeOf(searchString， position)
+## Object
 
-	在string内查找另一个字符串searchString，找到返回第一个匹配的字符的位置，否则返回-1
+### 属性
 
-lastIndexOf(searchString， position)
+._proto_
 
-	 从字符串的末尾开始查找，与indexof类似
+.constructor
 
-.localCompare(that)
+### 方法
 
-	比较两个字符串，如果string比字符串that小，结果为负数，如果相等，结果为0
+.has
 
-.match(regexp)
+.isProperty()
 
-	让字符串和一个正则表达式进行匹配
+.isPrototypeOf()
 
-.replace(searchValue, replaceValue)
+.setPrototypeOf(),
 
-	对string进行查找和替换操作，并返回一个新的字符串
+.hasOwnProperty(name)，如果object包含一个名为name的属性，那么hasOwnProperty方法返回true，原型链中的同名属性是不会被检查的
 
-.search(regexp)
+## RegExp
 
-	接受一个正则表达式作为参数而不是一个字符串，与indexof类似
+.exec(string)，是使用正则表达式的最强大防范，成功的匹配regexp和字符串string，返回一个数组
 
-.slice(start, end)
+.test(string)，使用正则表达式的最简单防范，如果该regexp匹配string，返回true，否则，返回false
 
-	复制string的一部分来构造一个新的字符串
+## String
 
-.split(separator, limit)
+### 属性
 
-	把string分割成片段来创建一个字符串数组
+.prototype
 
-.subString(start, end)
+.length
 
-	与slice一样
+### 方法
 
-.toLocalLowerCase()
+.formCharCode()
 
-	返回一个新的字符串，使用本地化的规则把这个string中的所有字母转换为小写字母
+fromCodePoint()
+
+.charAt(pos)，在string中pos位置出的字符串，如果pos小于0或者大于等于字符串的长度，则返回空字符串
+
+.charCodeAt(pos)，同charAt意义，返回的是以整数形式表示的在string中的pos位置处的字符的字符码位
+
+.concat()
+
+.endsWith()
+
+.includes()
+
+.indeOf(searchString， position)，在string内查找另一个字符串searchString，找到返回第一个匹配的字符的位置，否则返回-1
+
+lastIndexOf(searchString， position)，从字符串的末尾开始查找，与indexof类似
+
+.localCompare(that)，比较两个字符串，如果string比字符串that小，结果为负数，如果相等，结果为0
+
+.match(regexp)，让字符串和一个正则表达式进行匹配
+
+.padEnd()
+
+.padStart()
+
+.repeat()
+
+.replace(searchValue, replaceValue)，对string进行查找和替换操作，并返回一个新的字符串
+
+.search(regexp)，接受一个正则表达式作为参数而不是一个字符串，与indexof类似
+
+.slice(start, end)，复制string的一部分来构造一个新的字符串
+
+.split(separator, limit)，把string分割成片段来创建一个字符串数组
+
+.subString(start, end)，与slice一样
+
+.toLocalLowerCase()，返回一个新的字符串，使用本地化的规则把这个string中的所有字母转换为小写字母
 	
-.toLocalUpperCase()
+.toLocalUpperCase()，返回一个新字符串，使用本地化的规则把这个string中的所有字母转换为大写格式
 
-	返回一个新字符串，使用本地化的规则把这个string中的所有字母转换为大写格式
+.toLowerCase()，返回一个新的字符串，将string中的所有字母都被转换为小写字母
 
-.toLowerCase()
-	
-	返回一个新的字符串，将string中的所有字母都被转换为小写字母
+.toUpperCase()，返回一个新的字符串，将string中的所有字母都被转换为大写字母
 
-.toUpperCase()
+.formCharCode(char...)，根据一串数字编码返回一个字符串
 
-	返回一个新的字符串，将string中的所有字母都被转换为大写字母
+.trim()
 
-.formCharCode(char...)
+.trimRight()
 
-	根据一串数字编码返回一个字符串
+.trimLeft()
 
+.valuesOf()
 
-
+.raw()
 
 
 

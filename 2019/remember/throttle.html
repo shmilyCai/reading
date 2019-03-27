@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> 节流代码模拟实现</title>
+    <style>
+        #container {
+            width: 100%;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            color: #fff;
+            background-color: #444;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+</body>
+<script>
+    var count = 1;
+    var container = document.getElementById('container');
+
+    function getUserAction() {
+        container.innerHTML = count++;
+    }
+
+    container.onmousemove = debouce(getUserAction, 1000);
+
+
+    /**
+    fun 待执行的函数
+    wait 等待的时间
+    */
+    function throttle(fun, wait) {
+       
+    }
+</script>
+
+</html>
